@@ -891,6 +891,60 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero">
+
+        /* ===== HERO SECTION WITH FULL BACKGROUND ===== */
+.hero {
+    position: relative;
+    min-height: 100vh; /* Makes the hero section full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents any overflow from the background */
+    background: #0b1e33; /* Fallback color */
+}
+
+/* ===== BACKGROUND VIDEO OR IMAGE ===== */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the key — it covers the entire area */
+    z-index: 0; /* Places it behind the content */
+}
+
+/* ===== CONTENT ON TOP ===== */
+.hero .container {
+    position: relative;
+    z-index: 1; /* Places text and buttons on top of the background */
+    text-align: center;
+    color: #fff; /* Ensure text is readable */
+    padding: 20px;
+}
+
+/* ===== DARK OVERLAY FOR TEXT READABILITY ===== */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Overlay sits between background and content */
+}
+
+.hero .container {
+    z-index: 2; /* Content sits above the overlay */
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh; /* Slightly smaller on mobile */
+    }
+}
         <div class="container">
             <!-- ===== UPDATED: Background graph from Canva ===== -->
             <div class="bg-graph">
