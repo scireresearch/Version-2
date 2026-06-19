@@ -263,61 +263,32 @@
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
         }
 
-        /* ===== FIX: SERVICE ICONS - LARGE SIZE ===== */
-        .card .icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 120px;
-            width: 100%;
-            margin-bottom: 12px;
-        }
+       /* ===== FIX: Service icons at 276x160 (Kasi Insight size) ===== */
+.card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    width: 100%;
+    margin-bottom: 12px;
+    background: #f0f4f8;
+    border-radius: 12px;
+    padding: 10px;
+}
 
-        .card .icon img {
-            width: 100px !important;
-            height: 100px !important;
-            object-fit: contain;
-            display: block;
-        }
+.card .icon img {
+    width: 100% !important;
+    max-width: 276px !important;
+    height: 160px !important;
+    object-fit: contain;
+    display: block;
+}
 
-        .card .icon .emoji-fallback {
-            font-size: 4.5rem;
-            line-height: 1;
-        }
-
-        .card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: #3d4e62;
-        }
-
-        .card .tag {
-            display: inline-block;
-            background: #eef3f9;
-            color: #1e3c72;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-top: 10px;
-            letter-spacing: 0.3px;
-        }
-
-        .card .read-more {
-            display: inline-block;
-            margin-top: 12px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: #1e3c72;
-        }
-
-        .card .read-more:hover {
-            color: #4a7ab5;
-        }
+/* For emoji fallback icons */
+.card .icon .emoji-fallback {
+    font-size: 4.5rem;
+    line-height: 1;
+}
 
         /* ===== WHO WE SERVE ===== */
         .serve-grid {
@@ -903,82 +874,81 @@
         </div>
     </section>
 
-    <!-- ===== SERVICES (SINGLE, CORRECTED SECTION) ===== -->
-    <section id="services">
-        <div class="container">
-            <h2 class="section-title">What We Do</h2>
-            <p class="section-subtitle">Research services designed to give you reliable, actionable insights — from market research to medical studies.</p>
+    <!-- ===== SERVICES ===== -->
+<section id="services">
+    <div class="container">
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">Research services designed to give you reliable, actionable insights — from market research to medical studies.</p>
 
-            <div class="card-grid">
-                <!-- Market Research -->
-                <div class="card">
-                    <div class="icon">
-                        <img src="images/icons/market-research.png" alt="Market Research icon" loading="lazy">
-                    </div>
-                    <h3>Market Research</h3>
-                    <p>Consumer surveys, competitor analysis, market sizing, and customer satisfaction studies to help you understand your audience.</p>
-                    <span class="tag">Business</span>
-                    <a href="services.html#market-research" class="read-more">Learn more →</a>
+        <div class="card-grid">
+            <!-- Market Research -->
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/market-research.png" alt="Market Research icon" loading="lazy">
                 </div>
+                <h3>Market Research</h3>
+                <p>Consumer surveys, competitor analysis, market sizing, and customer satisfaction studies to help you understand your audience.</p>
+                <span class="tag">Business</span>
+                <a href="services.html#market-research" class="read-more">Learn more →</a>
+            </div>
 
-                <!-- Data Analysis -->
-                <div class="card">
-                    <div class="icon">
-                        <img src="images/icons/data-analysis.png" alt="Data Analysis icon" loading="lazy">
-                    </div>
-                    <h3>Data Analysis</h3>
-                    <p>Data cleaning, statistical analysis using R, Python, STATA, and Excel — plus visualization and report writing.</p>
-                    <span class="tag">All Sectors</span>
-                    <a href="services.html#data-analysis" class="read-more">Learn more →</a>
+            <!-- Data Analysis -->
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/data-analysis.png" alt="Data Analysis icon" loading="lazy">
                 </div>
+                <h3>Data Analysis</h3>
+                <p>Data cleaning, statistical analysis using R, Python, STATA, and Excel — plus visualization and report writing.</p>
+                <span class="tag">All Sectors</span>
+                <a href="services.html#data-analysis" class="read-more">Learn more →</a>
+            </div>
 
-                <!-- Monitoring & Evaluation -->
-                <div class="card">
-                    <div class="icon">
-                        <img src="images/icons/monitoring-evaluation.png" alt="Monitoring & Evaluation icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='📋'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
-                    </div>
-                    <h3>Monitoring &amp; Evaluation</h3>
-                    <p>Baseline surveys, mid-term evaluations, end-line assessments, and impact studies for programs and projects.</p>
-                    <span class="tag">NGOs &amp; Donors</span>
-                    <a href="services.html#monitoring-evaluation" class="read-more">Learn more →</a>
+            <!-- Monitoring & Evaluation -->
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/monitoring-evaluation.png" alt="Monitoring & Evaluation icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='📋'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
                 </div>
+                <h3>Monitoring &amp; Evaluation</h3>
+                <p>Baseline surveys, mid-term evaluations, end-line assessments, and impact studies for programs and projects.</p>
+                <span class="tag">NGOs &amp; Donors</span>
+                <a href="services.html#monitoring-evaluation" class="read-more">Learn more →</a>
+            </div>
 
-                <!-- Medical Research -->
-                <div class="card">
-                    <div class="icon">
-                        <img src="images/icons/medical-research.png" alt="Medical Research icon" loading="lazy">
-                    </div>
-                    <h3>Medical &amp; Pharma Research</h3>
-                    <p>Clinical research support, pharmaceutical data analysis, patient surveys, and GCP-compliant studies.</p>
-                    <span class="tag">Healthcare</span>
-                    <a href="services.html#medical-research" class="read-more">Learn more →</a>
+            <!-- Medical Research -->
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/medical-research.png" alt="Medical Research icon" loading="lazy">
                 </div>
+                <h3>Medical &amp; Pharma Research</h3>
+                <p>Clinical research support, pharmaceutical data analysis, patient surveys, and GCP-compliant studies.</p>
+                <span class="tag">Healthcare</span>
+                <a href="services.html#medical-research" class="read-more">Learn more →</a>
+            </div>
 
-                <!-- AI Fact-Checking -->
-                <div class="card">
-                    <div class="icon">
-                        <img src="images/icons/ai-fact-checking.png" alt="AI Fact-Checking icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='🤖'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
-                    </div>
-                    <h3>AI Fact-Checking</h3>
-                    <p>Verify AI-generated claims with real field data. Because AI generates — we verify with real Kenyan insights.</p>
-                    <span class="tag">Innovation</span>
-                    <a href="services.html#ai-verification" class="read-more">Learn more →</a>
+            <!-- AI Fact-Checking -->
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/ai-fact-checking.png" alt="AI Fact-Checking icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='🤖'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
                 </div>
+                <h3>AI Fact-Checking</h3>
+                <p>Verify AI-generated claims with real field data. Because AI generates — we verify with real Kenyan insights.</p>
+                <span class="tag">Innovation</span>
+                <a href="services.html#ai-verification" class="read-more">Learn more →</a>
+            </div>
 
-                <!-- Professional Training -->
-                <div class="card">
-                    <div class="icon">
-                        <img src="images/icons/professional-training.png" alt="Professional Training icon" loading="lazy">
-                    </div>
-                    <h3>Professional Training</h3>
-                    <p>Hands-on courses in research methods, data analysis (R, Python, STATA, Excel), and M&E frameworks.</p>
-                    <span class="tag">Capacity Building</span>
-                    <a href="services.html#training" class="read-more">Learn more →</a>
+            <!-- Professional Training -->
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/professional-training.png" alt="Professional Training icon" loading="lazy">
                 </div>
+                <h3>Professional Training</h3>
+                <p>Hands-on courses in research methods, data analysis (R, Python, STATA, Excel), and M&E frameworks.</p>
+                <span class="tag">Capacity Building</span>
+                <a href="services.html#training" class="read-more">Learn more →</a>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- ===== WHO WE SERVE ===== -->
     <section id="clients" class="section-alt">
         <div class="container">
