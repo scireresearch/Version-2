@@ -241,14 +241,42 @@
             background: #f4f7fa;
         }
 
-/* ===== Service Icons (Kasi Insight Style) ===== */
+/* ===== SERVICES ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #eaeef3;
+    max-width: 340px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Service Icons - Fixed Size ===== */
 .card .icon {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 276px; /* ← This stops it from stretching */
     min-height: 160px;
-    margin-bottom: 12px;
+    margin: 0 auto 12px;
     background: #f0f4f8;
     border-radius: 12px;
     padding: 10px;
@@ -256,38 +284,34 @@
 
 .card .icon img {
     width: 100%;
-    max-width: 276px;
     height: 160px;
-    object-fit: cover; /* ← Changed from 'contain' to 'cover' */
+    object-fit: cover;
     display: block;
     border-radius: 8px;
 }
-/* ===== FIX: Service icons at larger size ===== */
-.card .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px; /* Increased from 160px */
-    width: 100%;
-    margin-bottom: 12px;
-    background: #f0f4f8;
-    border-radius: 12px;
-    padding: 15px;
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+    .card .icon {
+        max-width: 240px;
+        min-height: 140px;
+    }
+    .card .icon img {
+        height: 140px;
+    }
 }
 
-.card .icon img {
-    width: 100% !important;
-    max-width: 320px !important; /* Increased from 276px */
-    height: 200px !important; /* Increased from 160px */
-    object-fit: contain;
-    display: block;
-}
-
-    
-/* For emoji fallback icons */
-.card .icon .emoji-fallback {
-    font-size: 4.5rem;
-    line-height: 1;
+@media (max-width: 480px) {
+    .card .icon {
+        max-width: 200px;
+        min-height: 120px;
+    }
+    .card .icon img {
+        height: 120px;
+    }
 }
 
         /* ===== WHO WE SERVE ===== */
