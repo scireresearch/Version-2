@@ -145,6 +145,7 @@ header {
     display: flex;
     flex-direction: column;
     line-height: 1.1;
+    min-width: 0; /* Allows flex shrinking */
 }
 
 .logo-text .main {
@@ -152,6 +153,7 @@ header {
     font-weight: 800;
     color: #1e3c72;
     letter-spacing: -0.5px;
+    white-space: nowrap; /* Prevents breaking */
 }
 
 .logo-text .main span {
@@ -164,8 +166,33 @@ header {
     color: #4a5b6e;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    white-space: nowrap; /* Keeps tagline on one line */
 }
 
+/* ===== RESPONSIVE - Adjust font sizes ===== */
+@media (max-width: 768px) {
+    .logo-text .main {
+        font-size: 1.2rem; /* Smaller on mobile */
+    }
+    
+    .logo-text .tagline {
+        font-size: 0.55rem; /* Smaller tagline on mobile */
+    }
+    
+    .logo svg {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text .main {
+        font-size: 1rem; /* Even smaller on very small screens */
+    }
+    
+    .logo-text .tagline {
+        font-size: 0.5rem;
+    }
+}
 /* ===== DESKTOP NAVIGATION ===== */
 .desktop-nav {
     display: flex;
@@ -1213,19 +1240,19 @@ header {
     <div class="container">
         <div class="header-content">
             <!-- Logo -->
-            <div class="logo">
-                <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="62" y1="62" x2="82" y2="82" stroke="#e67e22" stroke-width="6" stroke-linecap="round" />
-                    <circle cx="45" cy="45" r="28" fill="none" stroke="#1a5276" stroke-width="5" />
-                    <path d="M35,25 Q45,35 35,45 Q25,55 35,65" fill="none" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round" />
-                    <path d="M55,25 Q45,35 55,45 Q65,55 55,65" fill="none" stroke="#148f8f" stroke-width="2.5" stroke-linecap="round" />
-                    <circle cx="45" cy="45" r="3" fill="#e67e22" />
-                </svg>
-                <div class="logo-text">
-                    <span class="main">Scire <span>Research</span></span>
-                    <span class="tagline">Evidence for Better Decision-Making</span>
-                </div>
-            </div>
+           <div class="logo">
+    <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="62" y1="62" x2="82" y2="82" stroke="#e67e22" stroke-width="6" stroke-linecap="round" />
+        <circle cx="45" cy="45" r="28" fill="none" stroke="#1a5276" stroke-width="5" />
+        <path d="M35,25 Q45,35 35,45 Q25,55 35,65" fill="none" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M55,25 Q45,35 55,45 Q65,55 55,65" fill="none" stroke="#148f8f" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="45" cy="45" r="3" fill="#e67e22" />
+    </svg>
+    <div class="logo-text">
+        <span class="main">Scire <span>Research</span></span>
+        <span class="tagline">Evidence for Better Decision-Making</span>
+    </div>
+</div>
 
             <!-- Navigation (Desktop) -->
             <nav class="desktop-nav">
