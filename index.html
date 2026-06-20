@@ -240,13 +240,12 @@
         .section-alt {
             background: #f4f7fa;
         }
-
 /* ===== SERVICES ===== */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1020px; /* 3 cards × 320px + gaps */
     margin: 0 auto;
 }
 
@@ -258,9 +257,9 @@
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
     border: 1px solid #eaeef3;
-    max-width: 340px;
-    margin: 0 auto;
     width: 100%;
+    max-width: 320px; /* Fixed max width */
+    margin: 0 auto;
 }
 
 .card:hover {
@@ -274,7 +273,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 276px; /* ← This stops it from stretching */
+    max-width: 276px;
     min-height: 160px;
     margin: 0 auto 12px;
     background: #f0f4f8;
@@ -291,7 +290,33 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+        max-width: 700px;
+    }
+}
+
 @media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 100%;
+    }
+    .card .icon {
+        max-width: 200px;
+        min-height: 120px;
+    }
+    .card .icon img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        max-width: 100%;
+    }
     .card {
         max-width: 100%;
     }
@@ -303,17 +328,6 @@
         height: 140px;
     }
 }
-
-@media (max-width: 480px) {
-    .card .icon {
-        max-width: 200px;
-        min-height: 120px;
-    }
-    .card .icon img {
-        height: 120px;
-    }
-}
-
         /* ===== WHO WE SERVE ===== */
         .serve-grid {
             display: grid;
