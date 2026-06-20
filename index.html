@@ -775,52 +775,66 @@ header {
         }
 
         /* ===== BLOG ===== */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-        }
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
 
-        .blog-card {
-            background: #fff;
-            padding: 25px 20px;
-            border-radius: 12px;
-            border: 1px solid #eaeef3;
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-align: left;
-        }
+.blog-card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 1px solid #eaeef3;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
 
-        .blog-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-        }
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
 
-        .blog-card .blog-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
+.blog-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 12px;
+    background: #f0f4f8;
+    border-radius: 12px;
+    overflow: hidden;
+}
 
-        .blog-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #0b1e33;
-        }
+.blog-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
 
-        .blog-card p {
-            font-size: 0.9rem;
-            color: #3d4e62;
-            margin-bottom: 12px;
-        }
+.blog-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #0b1e33;
+}
 
-        .blog-card .read-more {
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: #1e3c72;
-        }
+.blog-card p {
+    font-size: 0.9rem;
+    color: #3d4e62;
+    margin-bottom: 12px;
+}
 
-        .blog-card .read-more:hover {
-            color: #4a7ab5;
-        }
+.blog-card .read-more {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1e3c72;
+}
+
+.blog-card .read-more:hover {
+    color: #4a7ab5;
+}
 
         /* ===== FAQ ===== */
         .faq-grid {
@@ -1470,24 +1484,45 @@ header {
             <p class="section-subtitle">Thoughts on research, data, and decision-making in Kenya.</p>
 
             <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-icon">📄</div>
-                    <h3>Domestic Borrowing &amp; Growth</h3>
-                    <p>Analyzing the effects of domestic government borrowing on economic growth in Kenya using ARDL and threshold regression.</p>
-                    <a href="post-domestic-borrowing.html" class="read-more">Read more →</a>
+               <!-- ===== BLOG ===== -->
+<section id="blog" class="section-alt">
+    <div class="container">
+        <h2 class="section-title">Latest Insights</h2>
+        <p class="section-subtitle">Thoughts on research, data, and decision-making in Kenya.</p>
+
+        <div class="blog-grid">
+            <!-- Blog Post 1: Domestic Borrowing -->
+            <div class="blog-card">
+                <div class="blog-icon">
+                    <img src="images/blog/borrowing.png" alt="Domestic Borrowing icon" loading="lazy">
                 </div>
-                <div class="blog-card">
-                    <div class="blog-icon">🤖</div>
-                    <h3>AI Fact-Checking in Kenya</h3>
-                    <p>Why verifying AI-generated claims with real local data matters for decision-making in East Africa.</p>
-                    <a href="post-ai-verification-puno.html" class="read-more">Read more →</a>
+                <h3>Domestic Borrowing &amp; Growth</h3>
+                <p>Analyzing the effects of domestic government borrowing on economic growth in Kenya using ARDL and threshold regression.</p>
+                <a href="post-domestic-borrowing.html" class="read-more">Read more →</a>
+            </div>
+
+            <!-- Blog Post 2: AI Fact-Checking -->
+            <div class="blog-card">
+                <div class="blog-icon">
+                    <img src="images/blog/ai-factcheck.png" alt="AI Fact-Checking icon" loading="lazy">
                 </div>
-                <div class="blog-card">
-                    <div class="blog-icon">📋</div>
-                    <h3>M&amp;E for NGOs</h3>
-                    <p>How monitoring and evaluation frameworks can help NGOs measure impact and secure donor funding.</p>
-                    <a href="post-ai-vs-field-research.html" class="read-more">Read more →</a>
+                <h3>AI Fact-Checking in Kenya</h3>
+                <p>Why verifying AI-generated claims with real local data matters for decision-making in East Africa.</p>
+                <a href="post-ai-verification-puno.html" class="read-more">Read more →</a>
+            </div>
+
+            <!-- Blog Post 3: M&E for NGOs -->
+            <div class="blog-card">
+                <div class="blog-icon">
+                    <img src="images/blog/monitoring.png" alt="Monitoring & Evaluation icon" loading="lazy">
                 </div>
+                <h3>M&amp;E for NGOs</h3>
+                <p>How monitoring and evaluation frameworks can help NGOs measure impact and secure donor funding.</p>
+                <a href="post-ai-vs-field-research.html" class="read-more">Read more →</a>
+            </div>
+        </div>
+    </div>
+</section>
             </div>
         </div>
     </section>
