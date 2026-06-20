@@ -241,28 +241,26 @@
             background: #f4f7fa;
         }
 
-        /* ===== SERVICES ===== */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
+        /* ===== Service Icons (Kasi Insight Style) ===== */
+.card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 12px;
+    background: #f0f4f8;
+    border-radius: 12px;
+    padding: 10px;
+}
 
-        .card {
-            background: #fff;
-            padding: 30px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid #eaeef3;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-        }
-
+.card .icon img {
+    width: 100%;
+    max-width: 276px; /* Match Kasi's width */
+    height: 160px; /* Match Kasi's height */
+    object-fit: cover; /* This is the key — fills the space */
+    display: block;
+    border-radius: 8px;
+}
 /* ===== FIX: Service icons at larger size ===== */
 .card .icon {
     display: flex;
