@@ -455,6 +455,7 @@ header {
     background: #0b1e33;
 }
 
+/* ===== HERO VIDEO IMPROVEMENTS ===== */
 .bg-video {
     position: absolute;
     top: 0;
@@ -463,8 +464,18 @@ header {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    filter: brightness(1.1) contrast(1.05);
 }
 
+/* Fallback for browsers that don't support videos */
+.bg-video source + img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ensure hero background is dark enough for text but not too dark */
 .hero::before {
     content: '';
     position: absolute;
@@ -472,7 +483,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -1391,28 +1402,28 @@ header {
     </nav>
 </div>
 
-    <!-- ===== HERO WITH VIDEO SLIDESHOW ===== -->
+<!-- ===== HERO WITH VIDEO SLIDESHOW ===== -->
 <section class="hero">
     <!-- Video 1 -->
-    <video class="bg-video" id="video1" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 1; transition: opacity 1.5s ease;">
+    <video class="bg-video" id="video1" muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 1; transition: opacity 1.5s ease; filter: brightness(1.1);">
         <source src="videos/background-video-1.mp4" type="video/mp4">
         <img src="images/background/graph-trend.png" alt="Data visualization background" style="width: 100%; height: 100%; object-fit: cover;">
     </video>
     
     <!-- Video 2 -->
-    <video class="bg-video" id="video2" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; transition: opacity 1.5s ease;">
+    <video class="bg-video" id="video2" muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; transition: opacity 1.5s ease; filter: brightness(1.1);">
         <source src="videos/background-video-2.mp4" type="video/mp4">
         <img src="images/background/field-research.jpg" alt="Field research background" style="width: 100%; height: 100%; object-fit: cover;">
     </video>
     
-    <!-- Overlay -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
+    <!-- Lighter Overlay -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 
     <div class="container" style="position: relative; z-index: 2; text-align: center; color: #fff; padding: 20px; max-width: 900px;">
         <!-- Text Slider -->
         <div class="hero-slider">
             <!-- Slide 1 -->
-            <div class="hero-slide active">
+            <div class="hero-slide active" data-video="1">
                 <h1>Turning <span class="highlight">Data</span> into Decisions</h1>
                 <p>Evidence-based research, data analytics, and decision intelligence for businesses, NGOs, and organizations across Kenya and beyond.</p>
                 <div class="btn-group">
@@ -1422,7 +1433,7 @@ header {
             </div>
 
             <!-- Slide 2 -->
-            <div class="hero-slide">
+            <div class="hero-slide" data-video="2">
                 <h1>Your trusted <span class="highlight">RESEARCH PARTNER.</span></h1>
                 <p>We provide real-world verification through field research, primary data collection, and rigorous analysis.</p>
                 <div class="btn-group">
@@ -1430,34 +1441,38 @@ header {
                     <a href="#contact" class="btn">Get Started</a>
                 </div>
             </div>
-                <!-- Slide 3 -->
-                <div class="hero-slide">
-                    <h1>Evidence for <span class="highlight">Better Decisions</span></h1>
-                    <p>Research services designed to give you reliable, actionable insights that drive impact.</p>
-                    <div class="btn-group">
-                        <a href="#about" class="btn">Why Choose Us</a>
-                        <a href="#contact" class="btn">Let's Talk</a>
-                    </div>
+            
+            <!-- Slide 3 -->
+            <div class="hero-slide" data-video="1">
+                <h1>Evidence for <span class="highlight">Better Decisions</span></h1>
+                <p>Research services designed to give you reliable, actionable insights that drive impact.</p>
+                <div class="btn-group">
+                    <a href="#about" class="btn">Why Choose Us</a>
+                    <a href="#contact" class="btn">Let's Talk</a>
                 </div>
+            </div>
+            
             <!-- Slide 4 - Vision Focused -->
-            <div class="hero-slide">
+            <div class="hero-slide" data-video="2">
                 <h1>Building Africa's <span class="highlight">Verified Data Infrastructure</span></h1>
                 <p>From research services to a global AI innovation hub. We're building the foundation for Africa's data-driven future.</p>
                 <div class="btn-group">
-                    <a href="vision.html" class="btn">Explore Our <span class="highlight"> Vision</a>
-                    <a href="#services" class="btn">Our Services</a>
+                    <a href="vision.html" class="btn" style="background: #4a7ab5; color: #fff;">Explore Our Vision</a>
+                    <a href="#services" class="btn" style="background: transparent; border: 2px solid #fff;">Our Services</a>
                 </div>
             </div>
         </div>
-<!-- Trust Badges (Static - always visible) -->
-<div class="trust-badge" style="display: flex; justify-content: center; gap: 20px 30px; flex-wrap: wrap; font-size: 0.9rem; color: #b0c4de; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; margin-top: 40px; align-items: center;">
-    <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 200+ Client Accounts Analyzed</span>
-    <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 30%+ Data Error Reduction</span>
-    <span style="display: inline-flex; align-items: center; gap: 6px;">✅ GCP Certified</span>
-    <span style="display: inline-flex; align-items: center; gap: 6px;" title="Selected for BeGreen (UNICEF/Generation Unlimited) among top 1.6% of applicants">✅ Top 1.6% Selected (BeGreen)</span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; color: #7aafd4;">🚀 Building Africa's AI Future</span>
-</div>
-        <!-- Slider Dots (Navigation) -->
+
+        <!-- Trust Badges -->
+        <div class="trust-badge" style="display: flex; justify-content: center; gap: 20px 30px; flex-wrap: wrap; font-size: 0.9rem; color: #b0c4de; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; margin-top: 40px; align-items: center;">
+            <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 200+ Client Accounts Analyzed</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 30%+ Data Error Reduction</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px;">✅ GCP Certified</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px;" title="Selected for BeGreen (UNICEF/Generation Unlimited) among top 1.6% of applicants">✅ Top 1.6% Selected (BeGreen)</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; color: #7aafd4;">🚀 Building Africa's AI Future</span>
+        </div>
+
+        <!-- Slider Dots -->
         <div class="slider-dots">
             <span class="dot active" data-slide="0"></span>
             <span class="dot" data-slide="1"></span>
@@ -1939,12 +1954,32 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-    // ===== HERO SLIDER AUTO-ROTATE =====
+<script>
+    // ===== HERO SLIDER WITH VIDEO SYNC =====
     document.addEventListener('DOMContentLoaded', function() {
         const slides = document.querySelectorAll('.hero-slide');
         const dots = document.querySelectorAll('.slider-dots .dot');
+        const video1 = document.getElementById('video1');
+        const video2 = document.getElementById('video2');
         let currentSlide = 0;
         let slideInterval;
+
+        // Function to switch videos
+        function switchVideo(videoNumber) {
+            if (videoNumber === 1) {
+                video1.style.opacity = '1';
+                video2.style.opacity = '0';
+                // Ensure video1 plays
+                video1.play().catch(function(e) {});
+                video2.pause();
+            } else {
+                video1.style.opacity = '0';
+                video2.style.opacity = '1';
+                // Ensure video2 plays
+                video2.play().catch(function(e) {});
+                video1.pause();
+            }
+        }
 
         // Function to show a specific slide
         function showSlide(index) {
@@ -1956,6 +1991,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show the target slide
             if (slides[index]) {
                 slides[index].classList.add('active');
+                // Switch video based on data-video attribute
+                const videoNum = slides[index].getAttribute('data-video');
+                if (videoNum) {
+                    switchVideo(parseInt(videoNum));
+                }
             }
             
             // Update dots
@@ -1975,13 +2015,12 @@ document.addEventListener('DOMContentLoaded', function() {
             showSlide(next);
         }
 
-        // Start auto-rotation (change every 5 seconds)
+        // Start auto-rotation
         function startAutoRotate() {
             if (slideInterval) clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 6000);
         }
 
-        // Stop auto-rotation when user interacts with dots
         function stopAutoRotate() {
             if (slideInterval) {
                 clearInterval(slideInterval);
@@ -1994,24 +2033,29 @@ document.addEventListener('DOMContentLoaded', function() {
             dot.addEventListener('click', function() {
                 stopAutoRotate();
                 showSlide(index);
-                startAutoRotate(); // Restart after manual interaction
+                startAutoRotate();
             });
         });
 
-        // Pause on hover (optional)
+        // Pause on hover
         const sliderContainer = document.querySelector('.hero-slider');
         if (sliderContainer) {
             sliderContainer.addEventListener('mouseenter', stopAutoRotate);
             sliderContainer.addEventListener('mouseleave', startAutoRotate);
         }
 
-        // Initialize with the first slide
+        // Initialize
         showSlide(0);
+        
+        // Start playing both videos initially (autoplay with sound off)
+        video1.play().catch(function(e) {});
+        video2.play().catch(function(e) {});
+        // Pause video2 initially since video1 is visible
+        video2.pause();
+        
         startAutoRotate();
     });
 </script>
-
-    <script>
     // ===== MOBILE MENU TOGGLE =====
     document.addEventListener('DOMContentLoaded', function() {
         const hamburger = document.getElementById('hamburger');
