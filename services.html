@@ -381,7 +381,7 @@
             margin: 0 auto 50px;
         }
 
-        /* ===== SERVICES GRID ===== */
+        /* ===== SERVICES GRID (Matches Homepage) ===== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -392,15 +392,15 @@
 
         .service-card {
             background: #fff;
-            padding: 40px 30px 30px;
+            padding: 30px 20px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #eaeef3;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eaeef3;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
         }
 
         .service-card:hover {
@@ -408,32 +408,32 @@
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
         }
 
-/* ===== ICON SQUARE - IMAGE FILLS COMPLETELY ===== */
-.service-card .icon {
-    width: 100%;
-    max-width: 240px;  /* CHANGE THIS TO 220px or 240px */
-    aspect-ratio: 1 / 1;
-    margin: 0 auto 16px;
-    background: #f0f4f8;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        /* ===== Service Icons - Fixed Size (Matches Homepage) ===== */
+        .service-card .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 276px;
+            min-height: 160px;
+            margin: 0 auto 12px;
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 10px;
+        }
 
         .service-card .icon img {
             width: 100%;
-            height: 100%;
+            height: 160px;
             object-fit: cover;
             display: block;
+            border-radius: 8px;
         }
 
         .service-card h3 {
             font-size: 1.2rem;
             color: #1e3c72;
             margin-bottom: 10px;
-            width: 100%;
         }
 
         .service-card p {
@@ -441,26 +441,6 @@
             font-size: 0.95rem;
             line-height: 1.7;
             margin-bottom: 15px;
-            width: 100%;
-            flex-grow: 1;
-        }
-
-        .service-card .tag {
-            display: inline-block;
-            background: #eaeef3;
-            padding: 4px 16px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #1e3c72;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .service-card .tag-innovation {
-            background: #1e3c72;
-            color: #fff;
         }
 
         .service-card .read-more {
@@ -505,6 +485,46 @@
 
         .section-alt .service-divider h3 {
             background: #f4f7fa;
+        }
+
+        /* ===== RESPONSIVE (Matches Homepage) ===== */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                max-width: 100%;
+            }
+            .service-card .icon {
+                max-width: 200px;
+                min-height: 120px;
+            }
+            .service-card .icon img {
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+            .service-card {
+                max-width: 100%;
+            }
+            .service-card .icon {
+                max-width: 240px;
+                min-height: 140px;
+            }
+            .service-card .icon img {
+                height: 140px;
+            }
         }
 
         /* ===== CTA SECTION ===== */
@@ -601,26 +621,12 @@
         }
 
         /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
-            }
-            .service-card .icon {
-                max-width: 200px;
-            }
-        }
-
         @media (max-width: 768px) {
             .page-header h1 {
                 font-size: 2.2rem;
             }
             .page-header p {
                 font-size: 1rem;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-                max-width: 100%;
             }
             .section-title {
                 font-size: 1.8rem;
@@ -631,9 +637,6 @@
             .service-divider h3 {
                 font-size: 1.3rem;
                 padding: 0 15px;
-            }
-            .service-card .icon {
-                max-width: 180px;
             }
         }
 
@@ -646,9 +649,6 @@
             }
             section {
                 padding: 40px 0;
-            }
-            .service-card .icon {
-                max-width: 160px;
             }
         }
     </style>
@@ -737,7 +737,6 @@
                     </div>
                     <h3>Market Research</h3>
                     <p>Consumer surveys, competitor analysis, market sizing, and customer satisfaction studies to help you understand your audience and make data-driven decisions.</p>
-
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
 
@@ -748,7 +747,6 @@
                     </div>
                     <h3>Data Analysis</h3>
                     <p>Data cleaning, statistical analysis using R, Python, STATA, and Excel — plus visualization and report writing to uncover actionable insights.</p>
-
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
 
@@ -759,7 +757,6 @@
                     </div>
                     <h3>Monitoring &amp; Evaluation</h3>
                     <p>Baseline surveys, mid-term evaluations, end-line assessments, and impact studies for programs and projects across all sectors.</p>
-
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
 
@@ -770,7 +767,6 @@
                     </div>
                     <h3>Medical &amp; Pharma Research</h3>
                     <p>Clinical research support, pharmaceutical data analysis, patient surveys, and GCP-compliant studies for healthcare organizations.</p>
- 
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
 
@@ -781,7 +777,6 @@
                     </div>
                     <h3>Professional Training</h3>
                     <p>Hands-on courses in research methods, data analysis (R, Python, STATA, Excel), and M&E frameworks for capacity building.</p>
- 
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
 
@@ -792,7 +787,6 @@
                     </div>
                     <h3>Research Writing &amp; Support</h3>
                     <p>Thesis writing, proposal development, grant writing, abstract preparation, and publication support for researchers and academics.</p>
-
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
             </div>
@@ -815,7 +809,6 @@
                     </div>
                     <h3>AI Fact-Checking</h3>
                     <p><strong>AI generates. We verify.</strong> We take AI-generated claims and validate them with real field research through surveys, interviews, and data verification.</p>
-
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
 
@@ -826,7 +819,6 @@
                     </div>
                     <h3>Proprietary Dataset Development</h3>
                     <p>Building Africa's most verified, high-quality datasets for AI training—starting with healthcare, agriculture, and economics.</p>
-
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
 
@@ -837,7 +829,6 @@
                     </div>
                     <h3>Data Science Consulting</h3>
                     <p>Advanced analytics, predictive modeling, and AI strategy for organizations ready to embrace the future.</p>
-
                     <a href="#" class="read-more">Learn more →</a>
                 </div>
             </div>
