@@ -8,108 +8,45 @@
     <meta name="description"
         content="Scire Research provides evidence-based research, data analytics, and decision intelligence for businesses, NGOs, and organizations in Kenya.">
 
-    <!-- ===== FAVICON - Magnifying Glass + DNA ===== -->
+    <!-- ===== FAVICON ===== -->
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cline x1='62' y1='62' x2='82' y2='82' stroke='%23e67e22' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='45' r='28' fill='none' stroke='%231a5276' stroke-width='5'/%3E%3Cpath d='M35,25 Q45,35 35,45 Q25,55 35,65' fill='none' stroke='%23e67e22' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M55,25 Q45,35 55,45 Q65,55 55,65' fill='none' stroke='%23148f8f' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='45' r='3' fill='%23e67e22'/%3E%3C/svg%3E">
 
     <style>
-/* ===== TRUST BADGE FIX ===== */
-.trust-badge {
-    display: flex;
-    justify-content: center;
-    gap: 20px 30px;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-    color: #b0c4de;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
-    margin-top: 40px;
-    align-items: center;
-}
+        /* ===== TRUST BADGE FIX ===== */
+        .trust-badge {
+            display: flex;
+            justify-content: center;
+            gap: 20px 30px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #b0c4de;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            margin-top: 40px;
+            align-items: center;
+        }
 
-.trust-badge span {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-}
+        .trust-badge span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
 
-/* Responsive - allow wrapping on smaller screens */
-@media (max-width: 768px) {
-    .trust-badge span {
-        white-space: normal; /* Allow wrapping on mobile if needed */
-    }
-}
+        @media (max-width: 768px) {
+            .trust-badge span {
+                white-space: normal;
+            }
+        }
 
-@media (max-width: 480px) {
-    .trust-badge {
-        gap: 10px 15px;
-        font-size: 0.75rem;
-    }
-}
+        @media (max-width: 480px) {
+            .trust-badge {
+                gap: 10px 15px;
+                font-size: 0.75rem;
+            }
+        }
 
-/* ===== INNOVATION HUB RESPONSIVE ===== */
-@media (max-width: 992px) {
-    #innovation [style*="grid-template-columns: repeat(3, 1fr)"] {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-
-@media (max-width: 768px) {
-    #innovation {
-        padding: 50px 0 !important;
-    }
-    
-    #innovation h2 {
-        font-size: 2rem !important;
-    }
-    
-    #innovation [style*="grid-template-columns: repeat(3, 1fr)"] {
-        grid-template-columns: 1fr !important;
-    }
-    
-    #innovation [style*="display: flex; justify-content: center; gap: 50px;"] {
-        gap: 25px !important;
-    }
-    
-    #innovation [style*="display: flex; justify-content: space-between;"] {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-    }
-    
-    #innovation [style*="position: absolute; top: 18px;"] {
-        display: none !important;
-    }
-    
-    #innovation .btn-primary,
-    #innovation .btn-secondary {
-        width: 100% !important;
-        text-align: center !important;
-        padding: 14px 20px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    #innovation h2 {
-        font-size: 1.6rem !important;
-    }
-    
-    #innovation [style*="display: flex; justify-content: center; gap: 50px;"] {
-        gap: 15px !important;
-    }
-    
-    #innovation [style*="font-size: 1.8rem;"] {
-        font-size: 1.4rem !important;
-    }
-}
-
-
-
-
-
-        
-        
         /* ===== RESET & BASE ===== */
         * {
             margin: 0;
@@ -147,49 +84,50 @@
             color: #4a7ab5;
         }
 
-       /* ===== BUTTONS ===== */
-.btn {
-    display: inline-block;
-    background: #1e3c72;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    text-align: center;
-}
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            background: #1e3c72;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            text-align: center;
+        }
 
-.btn:hover {
-    background: #2a5298;
-    transform: translateY(-2px);
-}
+        .btn:hover {
+            background: #2a5298;
+            transform: translateY(-2px);
+        }
 
-.btn-outline {
-    background: transparent;
-    color: #1e3c72;
-    border: 2px solid #1e3c72;
-}
+        .btn-outline {
+            background: transparent;
+            color: #1e3c72;
+            border: 2px solid #1e3c72;
+        }
 
-.btn-outline:hover {
-    background: #1e3c72;
-    color: #fff;
-}
+        .btn-outline:hover {
+            background: #1e3c72;
+            color: #fff;
+        }
 
-.btn-small {
-    padding: 8px 20px;
-    font-size: 0.9rem;
-    background: transparent;
-    color: #1e3c72;
-    border: 2px solid #1e3c72;
-}
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            background: transparent;
+            color: #1e3c72;
+            border: 2px solid #1e3c72;
+        }
 
-.btn-small:hover {
-    background: #1e3c72;
-    color: #fff;
-}
+        .btn-small:hover {
+            background: #1e3c72;
+            color: #fff;
+        }
+
         .section-title {
             text-align: center;
             font-size: 2.2rem;
@@ -206,527 +144,476 @@
         }
 
         /* ===== HEADER ===== */
-header {
-    background: #fff;
-    padding: 16px 0;
-    border-bottom: 1px solid #eaeef3;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
+        header {
+            background: #fff;
+            padding: 16px 0;
+            border-bottom: 1px solid #eaeef3;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-/* ===== LOGO ===== */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-.logo svg {
-    height: 45px;
-    width: auto;
-    flex-shrink: 0;
-}
+        /* ===== LOGO ===== */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-    /* This ensures the text takes up full width */
-    min-width: 0;
-    flex: 1;
-}
+        .logo svg {
+            height: 45px;
+            width: auto;
+            flex-shrink: 0;
+        }
 
-.logo-text .main {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #1e3c72;
-    letter-spacing: -0.5px;
-    /* Remove white-space: nowrap to allow wrapping if needed */
-    white-space: nowrap;
-    /* Stretch to fill width */
-    width: 100%;
-    display: block;
-}
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            min-width: 0;
+            flex: 1;
+        }
 
-.logo-text .main span {
-    color: #4a7ab5;
-}
+        .logo-text .main {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3c72;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            width: 100%;
+            display: block;
+        }
 
-.logo-text .tagline {
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: #4a5b6e;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    white-space: nowrap;
-    /* Match width of main title */
-    width: 100%;
-    display: block;
-}
+        .logo-text .main span {
+            color: #4a7ab5;
+        }
 
-/* ===== RESPONSIVE - Adjust font sizes ===== */
-@media (max-width: 768px) {
-    .logo-text .main {
-        font-size: 1.2rem;
-    }
-    
-    .logo-text .tagline {
-        font-size: 0.55rem;
-    }
-    
-    .logo svg {
-        height: 35px;
-    }
-}
+        .logo-text .tagline {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #4a5b6e;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            width: 100%;
+            display: block;
+        }
 
-@media (max-width: 480px) {
-    .logo-text .main {
-        font-size: 1rem;
-    }
-    
-    .logo-text .tagline {
-        font-size: 0.5rem;
-    }
-}
-/* ===== DESKTOP NAVIGATION ===== */
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+        @media (max-width: 768px) {
+            .logo-text .main {
+                font-size: 1.2rem;
+            }
+            .logo-text .tagline {
+                font-size: 0.55rem;
+            }
+            .logo svg {
+                height: 35px;
+            }
+        }
 
-.desktop-nav a {
-    font-weight: 500;
-    color: #2c3e50;
-}
+        @media (max-width: 480px) {
+            .logo-text .main {
+                font-size: 1rem;
+            }
+            .logo-text .tagline {
+                font-size: 0.5rem;
+            }
+        }
 
-.desktop-nav a:hover {
-    color: #1e3c72;
-}
+        /* ===== DESKTOP NAVIGATION ===== */
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-/* ===== HAMBURGER MENU ===== */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 5px;
-    z-index: 101;
-}
+        .desktop-nav a {
+            font-weight: 500;
+            color: #2c3e50;
+        }
 
-.hamburger .bar {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background: #1e3c72;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
+        .desktop-nav a:hover {
+            color: #1e3c72;
+        }
 
-/* Hamburger animation when active */
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
+        /* ===== HAMBURGER MENU ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 101;
+        }
 
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
+        .hamburger .bar {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: #1e3c72;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
 
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
 
-/* ===== MOBILE MENU OVERLAY ===== */
-.mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 350px;
-    height: 100%;
-    background: #1e3c72;
-    z-index: 1000;
-    transition: right 0.4s ease;
-    padding: 60px 30px;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-}
+        /* ===== MOBILE MENU OVERLAY ===== */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 350px;
+            height: 100%;
+            background: #1e3c72;
+            z-index: 1000;
+            transition: right 0.4s ease;
+            padding: 60px 30px;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+        }
 
-.mobile-menu-overlay.open {
-    right: 0;
-}
+        .mobile-menu-overlay.open {
+            right: 0;
+        }
 
-.mobile-menu-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
 
-.mobile-menu-close:hover {
-    opacity: 1;
-}
+        .mobile-menu-close:hover {
+            opacity: 1;
+        }
 
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 40px;
-}
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 40px;
+        }
 
-.mobile-nav a {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: color 0.3s;
-}
+        .mobile-nav a {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s;
+        }
 
-.mobile-nav a:hover {
-    color: #4a7ab5;
-}
+        .mobile-nav a:hover {
+            color: #4a7ab5;
+        }
 
-.mobile-nav .btn {
-    display: inline-block;
-    margin-top: 10px;
-    text-align: center;
-    background: #fff;
-    color: #1e3c72;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-}
+        .mobile-nav .btn {
+            display: inline-block;
+            margin-top: 10px;
+            text-align: center;
+            background: #fff;
+            color: #1e3c72;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
 
-.mobile-nav .btn:hover {
-    background: #eaeef3;
-}
+        .mobile-nav .btn:hover {
+            background: #eaeef3;
+        }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-    
-    .logo-text .main {
-        font-size: 1.2rem;
-    }
-    
-    .logo-text .tagline {
-        font-size: 0.55rem;
-    }
-    
-    .logo svg {
-        height: 35px;
-    }
-}
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .logo-text .main {
+                font-size: 1.2rem;
+            }
+            .logo-text .tagline {
+                font-size: 0.55rem;
+            }
+            .logo svg {
+                height: 35px;
+            }
+        }
 
-@media (min-width: 769px) {
-    .mobile-menu-overlay {
-        display: none;
-    }
-}
+        @media (min-width: 769px) {
+            .mobile-menu-overlay {
+                display: none;
+            }
+        }
+
         /* ===== HERO SLIDER ===== */
-.hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #0b1e33;
-}
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #0b1e33;
+        }
 
-/* ===== HERO VIDEO IMPROVEMENTS ===== */
-.bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    filter: brightness(1.1) contrast(1.05);
-}
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(1.1) contrast(1.05);
+        }
 
-/* Fallback for browsers that don't support videos */
-.bg-video source + img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .bg-video source+img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* Ensure hero background is dark enough for text but not too dark */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-.hero .container {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-    max-width: 900px;
-}
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            max-width: 900px;
+        }
 
-/* ===== SLIDER CONTAINER ===== */
-.hero-slider {
-    position: relative;
-    min-height: 300px; /* Adjust based on your content */
-}
+        .hero-slider {
+            position: relative;
+            min-height: 300px;
+        }
 
-/* ===== INDIVIDUAL SLIDES ===== */
-.hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-    transform: translateY(20px);
-    pointer-events: none;
-    visibility: hidden;
-}
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transform: translateY(20px);
+            pointer-events: none;
+            visibility: hidden;
+        }
 
-.hero-slide.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-    visibility: visible;
-    position: relative;
-}
+        .hero-slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            visibility: visible;
+            position: relative;
+        }
 
-/* ===== SLIDE CONTENT ===== */
-.hero-slide h1 {
-    font-size: 2.8rem;
-    margin-bottom: 16px;
-    color: #fff;
-}
+        .hero-slide h1 {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            color: #fff;
+        }
 
-.hero-slide .highlight {
-    border-bottom: 4px solid #4a7ab5;
-}
+        .hero-slide .highlight {
+            border-bottom: 4px solid #4a7ab5;
+        }
 
-.hero-slide p {
-    font-size: 1.2rem;
-    color: #b0c4de;
-    max-width: 700px;
-    margin: 0 auto 30px;
-}
+        .hero-slide p {
+            font-size: 1.2rem;
+            color: #b0c4de;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
 
-.hero-slide .btn-group {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        .hero-slide .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-/* ===== TRUST BADGE (Static) ===== */
-.trust-badge {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 20px 30px;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-    color: #b0c4de;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
-}
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
 
-.trust-badge span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
+        .slider-dots .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-block;
+        }
 
-/* ===== SLIDER DOTS ===== */
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
-}
+        .slider-dots .dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(1.2);
+        }
 
-.slider-dots .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    display: inline-block;
-}
+        .slider-dots .dot.active {
+            background: #4a7ab5;
+            transform: scale(1.3);
+        }
 
-.slider-dots .dot:hover {
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(1.2);
-}
+        @media (max-width: 768px) {
+            .hero-slide h1 {
+                font-size: 2rem;
+            }
+            .hero-slide p {
+                font-size: 1rem;
+            }
+            .hero-slider {
+                min-height: 350px;
+            }
+        }
 
-.slider-dots .dot.active {
-    background: #4a7ab5;
-    transform: scale(1.3);
-}
+        @media (max-width: 480px) {
+            .hero-slide h1 {
+                font-size: 1.6rem;
+            }
+            .hero-slide .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-slider {
+                min-height: 400px;
+            }
+        }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .hero-slide h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-slide p {
-        font-size: 1rem;
-    }
-    
-    .hero-slider {
-        min-height: 350px;
-    }
-    
-    .trust-badge {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-slide h1 {
-        font-size: 1.6rem;
-    }
-    
-    .hero-slide .btn-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .hero-slider {
-        min-height: 400px;
-    }
-}
         /* ===== SECTIONS ===== */
         section {
             padding: 70px 0;
         }
-
         .section-alt {
             background: #f4f7fa;
         }
-/* ===== SERVICES ===== */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
-    gap: 30px;
-    max-width: 1020px; /* 3 cards × 320px + gaps */
-    margin: 0 auto;
-}
 
-.card {
-    background: #fff;
-    padding: 30px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #eaeef3;
-    width: 100%;
-    max-width: 320px; /* Fixed max width */
-    margin: 0 auto;
-}
+        /* ===== SERVICES ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1020px;
+            margin: 0 auto;
+        }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-}
+        .card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eaeef3;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
 
-/* ===== Service Icons - Fixed Size ===== */
-.card .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 276px;
-    min-height: 160px;
-    margin: 0 auto 12px;
-    background: #f0f4f8;
-    border-radius: 12px;
-    padding: 10px;
-}
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        }
 
-.card .icon img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    display: block;
-    border-radius: 8px;
-}
+        .card .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 276px;
+            min-height: 160px;
+            margin: 0 auto 12px;
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 10px;
+        }
 
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-        max-width: 700px;
-    }
-}
+        .card .icon img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
 
-@media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        max-width: 100%;
-    }
-    .card .icon {
-        max-width: 200px;
-        min-height: 120px;
-    }
-    .card .icon img {
-        height: 120px;
-    }
-}
+        @media (max-width: 1024px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+            }
+        }
 
-@media (max-width: 480px) {
-    .card-grid {
-        grid-template-columns: 1fr; /* 1 column on mobile */
-        max-width: 100%;
-    }
-    .card {
-        max-width: 100%;
-    }
-    .card .icon {
-        max-width: 240px;
-        min-height: 140px;
-    }
-    .card .icon img {
-        height: 140px;
-    }
-}
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                max-width: 100%;
+            }
+            .card .icon {
+                max-width: 200px;
+                min-height: 120px;
+            }
+            .card .icon img {
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+            .card {
+                max-width: 100%;
+            }
+            .card .icon {
+                max-width: 240px;
+                min-height: 140px;
+            }
+            .card .icon img {
+                height: 140px;
+            }
+        }
+
         /* ===== WHO WE SERVE ===== */
         .serve-grid {
             display: grid;
@@ -752,7 +639,6 @@ header {
             font-size: 1.2rem;
             margin-bottom: 8px;
         }
-
         .serve-item p {
             color: #3d4e62;
             font-size: 0.95rem;
@@ -806,7 +692,6 @@ header {
             font-weight: 800;
             display: block;
         }
-
         .stats-grid .stat-label {
             font-size: 0.95rem;
             opacity: 0.85;
@@ -823,17 +708,14 @@ header {
             text-align: center;
             padding: 20px;
         }
-
         .why-item .icon {
             font-size: 2.4rem;
             margin-bottom: 10px;
         }
-
         .why-item h4 {
             font-size: 1.1rem;
             margin-bottom: 6px;
         }
-
         .why-item p {
             font-size: 0.9rem;
             color: #3d4e62;
@@ -872,13 +754,11 @@ header {
         .team-card h4 {
             font-size: 1.1rem;
         }
-
         .team-card .role {
             font-size: 0.9rem;
             color: #4a7ab5;
             font-weight: 600;
         }
-
         .team-card p {
             font-size: 0.9rem;
             color: #3d4e62;
@@ -905,134 +785,128 @@ header {
             color: #1e2a3a;
             margin-bottom: 12px;
         }
-
         .testimonial-item .author {
             font-weight: 600;
             color: #1e3c72;
         }
-
         .testimonial-item .source {
             font-size: 0.85rem;
             color: #4a5b6e;
         }
 
-/* ===== BLOG ===== */
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns like services */
-    gap: 30px;
-    max-width: 1020px;
-    margin: 0 auto;
-}
+        /* ===== BLOG ===== */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1020px;
+            margin: 0 auto;
+        }
 
-.blog-card {
-    background: #fff;
-    padding: 30px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #eaeef3;
-    width: 100%;
-    max-width: 320px; /* Fixed max width like services */
-    margin: 0 auto;
-}
+        .blog-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eaeef3;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
 
-.blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-}
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        }
 
-/* ===== Blog Icons - Fixed Size (like service icons) ===== */
-.blog-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 276px;
-    min-height: 160px;
-    margin: 0 auto 12px;
-    background: #f0f4f8;
-    border-radius: 12px;
-    padding: 10px;
-}
+        .blog-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 276px;
+            min-height: 160px;
+            margin: 0 auto 12px;
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 10px;
+        }
 
-.blog-icon img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    display: block;
-    border-radius: 8px;
-}
+        .blog-icon img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
 
-/* ===== Blog Card Typography ===== */
-.blog-card h3 {
-    font-size: 1.2rem;
-    margin: 12px 0 8px;
-    color: #1e3c72;
-}
+        .blog-card h3 {
+            font-size: 1.2rem;
+            margin: 12px 0 8px;
+            color: #1e3c72;
+        }
+        .blog-card p {
+            color: #4a5b6e;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
 
-.blog-card p {
-    color: #4a5b6e;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-    line-height: 1.5;
-}
+        .blog-card .read-more {
+            display: inline-block;
+            color: #1e3c72;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.2s, transform 0.2s;
+        }
 
-/* ===== Read More Link ===== */
-.blog-card .read-more {
-    display: inline-block;
-    color: #1e3c72;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.2s, transform 0.2s;
-}
+        .blog-card .read-more:hover {
+            color: #4a7ab5;
+            transform: translateX(4px);
+        }
 
-.blog-card .read-more:hover {
-    color: #4a7ab5;
-    transform: translateX(4px);
-}
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+            }
+        }
 
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-    .blog-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-        max-width: 700px;
-    }
-}
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                max-width: 100%;
+            }
+            .blog-icon {
+                max-width: 200px;
+                min-height: 120px;
+            }
+            .blog-icon img {
+                height: 120px;
+            }
+        }
 
-@media (max-width: 768px) {
-    .blog-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        max-width: 100%;
-    }
-    .blog-icon {
-        max-width: 200px;
-        min-height: 120px;
-    }
-    .blog-icon img {
-        height: 120px;
-    }
-}
+        @media (max-width: 480px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+            .blog-card {
+                max-width: 100%;
+            }
+            .blog-icon {
+                max-width: 240px;
+                min-height: 140px;
+            }
+            .blog-icon img {
+                height: 140px;
+            }
+        }
 
-@media (max-width: 480px) {
-    .blog-grid {
-        grid-template-columns: 1fr; /* 1 column on mobile */
-        max-width: 100%;
-    }
-    .blog-card {
-        max-width: 100%;
-    }
-    .blog-icon {
-        max-width: 240px;
-        min-height: 140px;
-    }
-    .blog-icon img {
-        height: 140px;
-    }
-}
         /* ===== FAQ ===== */
         .faq-grid {
             max-width: 800px;
@@ -1188,18 +1062,15 @@ header {
         .cta h2 {
             font-size: 2rem;
         }
-
         .cta p {
             font-size: 1.1rem;
             margin: 10px 0 25px;
             opacity: 0.9;
         }
-
         .cta .btn {
             background: #fff;
             color: #1e3c72;
         }
-
         .cta .btn:hover {
             background: #eaeef3;
         }
@@ -1216,7 +1087,6 @@ header {
         .cta .contact-info a {
             color: #b0c4de;
         }
-
         .cta .contact-info a:hover {
             color: #fff;
         }
@@ -1233,7 +1103,6 @@ header {
         footer a {
             color: #b0c4de;
         }
-
         footer a:hover {
             color: #fff;
         }
@@ -1245,73 +1114,48 @@ header {
             gap: 20px;
             flex-wrap: wrap;
         }
-        /* ===== SOCIAL LINKS ===== */
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.1);
-    transition: background 0.3s, transform 0.2s;
-}
 
-.social-links a:hover {
-    background: #4a7ab5;
-    transform: translateY(-3px);
-}
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s, transform 0.2s;
+        }
 
-.social-links svg {
-    width: 20px;
-    height: 20px;
-}
+        .social-links a:hover {
+            background: #4a7ab5;
+            transform: translateY(-3px);
+        }
+
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
-
-            .hero .trust-badge {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-
             .section-title {
                 font-size: 1.8rem;
             }
-
             .process-steps {
                 flex-direction: column;
                 align-items: center;
             }
-
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-
             .cta .contact-info {
                 flex-direction: column;
                 gap: 10px;
             }
-
-            header .container {
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-            }
-
-            nav {
-                justify-content: center;
-            }
-
-            .logo-text .main {
-                font-size: 1.5rem;
-            }
-
             .team-card .team-photo {
                 width: 120px;
                 height: 120px;
@@ -1322,25 +1166,20 @@ header {
             .hero h1 {
                 font-size: 1.6rem;
             }
-
             .hero p {
                 font-size: 1rem;
             }
-
             .btn-group {
                 flex-direction: column;
                 align-items: center;
             }
-
             .card-grid,
             .blog-grid {
                 grid-template-columns: 1fr;
             }
-
             .team-grid {
                 grid-template-columns: 1fr;
             }
-
             .logo-text .main {
                 font-size: 1.2rem;
             }
@@ -1350,177 +1189,175 @@ header {
 
 <body>
 
-   <!-- ===== HEADER ===== -->
-<header>
-    <div class="container">
-        <div class="header-content">
-            <!-- Logo -->
-           <div class="logo">
-    <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <line x1="62" y1="62" x2="82" y2="82" stroke="#e67e22" stroke-width="6" stroke-linecap="round" />
-        <circle cx="45" cy="45" r="28" fill="none" stroke="#1a5276" stroke-width="5" />
-        <path d="M35,25 Q45,35 35,45 Q25,55 35,65" fill="none" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round" />
-        <path d="M55,25 Q45,35 55,45 Q65,55 55,65" fill="none" stroke="#148f8f" stroke-width="2.5" stroke-linecap="round" />
-        <circle cx="45" cy="45" r="3" fill="#e67e22" />
-    </svg>
-    <div class="logo-text">
-        <span class="main">Scire <span>Research</span></span>
-        <span class="tagline">Evidence for Better Decision-Making</span>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="62" y1="62" x2="82" y2="82" stroke="#e67e22" stroke-width="6" stroke-linecap="round" />
+                        <circle cx="45" cy="45" r="28" fill="none" stroke="#1a5276" stroke-width="5" />
+                        <path d="M35,25 Q45,35 35,45 Q25,55 35,65" fill="none" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round" />
+                        <path d="M55,25 Q45,35 55,45 Q65,55 55,65" fill="none" stroke="#148f8f" stroke-width="2.5" stroke-linecap="round" />
+                        <circle cx="45" cy="45" r="3" fill="#e67e22" />
+                    </svg>
+                    <div class="logo-text">
+                        <span class="main">Scire <span>Research</span></span>
+                        <span class="tagline">Evidence for Better Decision-Making</span>
+                    </div>
+                </div>
+                <nav class="desktop-nav">
+                    <a href="#services">Services</a>
+                    <a href="#clients">Clients</a>
+                    <a href="#team">Team</a>
+                    <a href="blog.html">Insights</a>
+                    <a href="vision.html">Vision</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact" class="btn btn-small">Contact</a>
+                </nav>
+                <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-close" id="closeMenu">✕</div>
+        <nav class="mobile-nav">
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#team">Team</a>
+            <a href="blog.html">Insights</a>
+            <a href="vision.html">Vision</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="btn btn-small">Contact</a>
+        </nav>
     </div>
-</div>
-<nav class="desktop-nav">
-    <a href="#services">Services</a>
-    <a href="#clients">Clients</a>
-    <a href="#team">Team</a>
-    <a href="blog.html">Insights</a>
-    <a href="vision.html">Vision</a> <!-- Add this -->
-    <a href="#faq">FAQ</a>
-    <a href="#contact" class="btn btn-small">Contact</a>
-</nav>
 
-            <!-- Hamburger Menu (Mobile) -->
-            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </div>
-</header>
+    <!-- ===== HERO WITH VIDEO SLIDESHOW ===== -->
+    <section class="hero">
+        <!-- Video 1 -->
+        <video class="bg-video" id="video1" muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 1; transition: opacity 1.5s ease; filter: brightness(1.1);">
+            <source src="videos/background-video-1.mp4" type="video/mp4">
+            <img src="images/background/graph-trend.png" alt="Data visualization background" style="width: 100%; height: 100%; object-fit: cover;">
+        </video>
+        
+        <!-- Video 2 -->
+        <video class="bg-video" id="video2" muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; transition: opacity 1.5s ease; filter: brightness(1.1);">
+            <source src="videos/background-video-2.mp4" type="video/mp4">
+            <img src="images/background/field-research.jpg" alt="Field research background" style="width: 100%; height: 100%; object-fit: cover;">
+        </video>
+        
+        <!-- Overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 
-<!-- ===== MOBILE MENU (Offcanvas) ===== -->
-<div class="mobile-menu-overlay" id="mobileMenu">
-    <div class="mobile-menu-close" id="closeMenu">✕</div>
-    <nav class="mobile-nav">
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#team">Team</a>
-        <a href="blog.html">Insights</a>
-        <a href="vision.html">Vision</a> <!-- Fixed! -->
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn-small">Contact</a>
-    </nav>
-</div>
+        <div class="container" style="position: relative; z-index: 2; text-align: center; color: #fff; padding: 20px; max-width: 900px;">
+            <!-- Text Slider -->
+            <div class="hero-slider">
+                <!-- Slide 1 -->
+                <div class="hero-slide active" data-video="1">
+                    <h1>Turning <span class="highlight">Data</span> into Decisions</h1>
+                    <p>Evidence-based research, data analytics, and decision intelligence for businesses, NGOs, and organizations across Kenya and beyond.</p>
+                    <div class="btn-group">
+                        <a href="#contact" class="btn">Get a Free Consultation</a>
+                        <a href="#services" class="btn">Explore Services</a>
+                    </div>
+                </div>
 
-<!-- ===== HERO WITH VIDEO SLIDESHOW ===== -->
-<section class="hero">
-    <!-- Video 1 -->
-    <video class="bg-video" id="video1" muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 1; transition: opacity 1.5s ease; filter: brightness(1.1);">
-        <source src="videos/background-video-1.mp4" type="video/mp4">
-        <img src="images/background/graph-trend.png" alt="Data visualization background" style="width: 100%; height: 100%; object-fit: cover;">
-    </video>
-    
-    <!-- Video 2 -->
-    <video class="bg-video" id="video2" muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; transition: opacity 1.5s ease; filter: brightness(1.1);">
-        <source src="videos/background-video-2.mp4" type="video/mp4">
-        <img src="images/background/field-research.jpg" alt="Field research background" style="width: 100%; height: 100%; object-fit: cover;">
-    </video>
-    
-    <!-- Lighter Overlay -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-
-    <div class="container" style="position: relative; z-index: 2; text-align: center; color: #fff; padding: 20px; max-width: 900px;">
-        <!-- Text Slider -->
-        <div class="hero-slider">
-            <!-- Slide 1 -->
-            <div class="hero-slide active" data-video="1">
-                <h1>Turning <span class="highlight">Data</span> into Decisions</h1>
-                <p>Evidence-based research, data analytics, and decision intelligence for businesses, NGOs, and organizations across Kenya and beyond.</p>
-                <div class="btn-group">
-                    <a href="#contact" class="btn">Get a Free Consultation</a>
-                    <a href="#services" class="btn">Explore Services</a>
+                <!-- Slide 2 -->
+                <div class="hero-slide" data-video="2">
+                    <h1>Your trusted <span class="highlight">RESEARCH PARTNER.</span></h1>
+                    <p>We provide real-world verification through field research, primary data collection, and rigorous analysis.</p>
+                    <div class="btn-group">
+                        <a href="#services" class="btn">Our Services</a>
+                        <a href="#contact" class="btn">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="hero-slide" data-video="1">
+                    <h1>Evidence for <span class="highlight">Better Decisions</span></h1>
+                    <p>Research services designed to give you reliable, actionable insights that drive impact.</p>
+                    <div class="btn-group">
+                        <a href="#about" class="btn">Why Choose Us</a>
+                        <a href="#contact" class="btn">Let's Talk</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 - Vision Focused -->
+                <div class="hero-slide" data-video="2">
+                    <h1>Building Africa's <span class="highlight">Verified Data Infrastructure</span></h1>
+                    <p>From research services to a global AI innovation hub. We're building the foundation for Africa's data-driven future.</p>
+                    <div class="btn-group">
+                        <a href="vision.html" class="btn" style="background: #4a7ab5; color: #fff;">Explore Our Vision</a>
+                        <a href="#services" class="btn" style="background: transparent; border: 2px solid #fff;">Our Services</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="hero-slide" data-video="2">
-                <h1>Your trusted <span class="highlight">RESEARCH PARTNER.</span></h1>
-                <p>We provide real-world verification through field research, primary data collection, and rigorous analysis.</p>
-                <div class="btn-group">
-                    <a href="#services" class="btn">Our Services</a>
-                    <a href="#contact" class="btn">Get Started</a>
-                </div>
+            <!-- Trust Badges -->
+            <div class="trust-badge" style="display: flex; justify-content: center; gap: 20px 30px; flex-wrap: wrap; font-size: 0.9rem; color: #b0c4de; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; margin-top: 40px; align-items: center;">
+                <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 200+ Client Accounts Analyzed</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 30%+ Data Error Reduction</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px;">✅ GCP Certified</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px;" title="Selected for BeGreen (UNICEF/Generation Unlimited) among top 1.6% of applicants">✅ Top 1.6% Selected (BeGreen)</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; color: #7aafd4;">🚀 Building Africa's AI Future</span>
             </div>
-            
-            <!-- Slide 3 -->
-            <div class="hero-slide" data-video="1">
-                <h1>Evidence for <span class="highlight">Better Decisions</span></h1>
-                <p>Research services designed to give you reliable, actionable insights that drive impact.</p>
-                <div class="btn-group">
-                    <a href="#about" class="btn">Why Choose Us</a>
-                    <a href="#contact" class="btn">Let's Talk</a>
-                </div>
-            </div>
-            
-            <!-- Slide 4 - Vision Focused -->
-            <div class="hero-slide" data-video="2">
-                <h1>Building Africa's <span class="highlight">Verified Data Infrastructure</span></h1>
-                <p>From research services to a global AI innovation hub. We're building the foundation for Africa's data-driven future.</p>
-                <div class="btn-group">
-                    <a href="vision.html" class="btn" style="background: #4a7ab5; color: #fff;">Explore Our Vision</a>
-                    <a href="#services" class="btn" style="background: transparent; border: 2px solid #fff;">Our Services</a>
-                </div>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
             </div>
         </div>
+    </section>
 
-        <!-- Trust Badges -->
-        <div class="trust-badge" style="display: flex; justify-content: center; gap: 20px 30px; flex-wrap: wrap; font-size: 0.9rem; color: #b0c4de; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; margin-top: 40px; align-items: center;">
-            <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 200+ Client Accounts Analyzed</span>
-            <span style="display: inline-flex; align-items: center; gap: 6px;">✅ 30%+ Data Error Reduction</span>
-            <span style="display: inline-flex; align-items: center; gap: 6px;">✅ GCP Certified</span>
-            <span style="display: inline-flex; align-items: center; gap: 6px;" title="Selected for BeGreen (UNICEF/Generation Unlimited) among top 1.6% of applicants">✅ Top 1.6% Selected (BeGreen)</span>
-            <span style="display: inline-flex; align-items: center; gap: 6px; color: #7aafd4;">🚀 Building Africa's AI Future</span>
+    <!-- ===== SERVICES ===== -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">Research services designed to give you reliable, actionable insights — from market research to AI innovation.</p>
+
+            <!-- Core Research Services -->
+            <h3 style="text-align: center; font-size: 1.3rem; color: #1e3c72; margin: 40px 0 6px; font-weight: 600;">Core Research Services</h3>
+            <p style="text-align: center; color: #4a5b6e; max-width: 600px; margin: 0 auto 25px; font-size: 0.95rem;">Trusted research services that power better decisions today</p>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto;">
+                <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Market Research</span>
+                <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Data Analysis</span>
+                <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Monitoring &amp; Evaluation</span>
+                <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Medical &amp; Pharma Research</span>
+                <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Professional Training</span>
+                <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Research Writing &amp; Support</span>
+            </div>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <a href="services.html#core-services" class="btn" style="background: #1e3c72; color: #fff; padding: 10px 30px; font-size: 0.9rem;">View All Core Services →</a>
+            </div>
+
+            <!-- Innovation & AI Services -->
+            <h3 style="text-align: center; font-size: 1.3rem; color: #0b1e33; margin: 50px 0 6px; font-weight: 600;">Innovation &amp; AI Services</h3>
+            <p style="text-align: center; color: #4a5b6e; max-width: 600px; margin: 0 auto 25px; font-size: 0.95rem;">Building the future of AI and innovation from Kenya</p>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto;">
+                <span style="background: #e3edfb; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #4a7ab5; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#e3edfb'; this.style.color='#1e3c72';">AI Fact-Checking</span>
+                <span style="background: #1e3c72; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #fff; border: 1px solid #1e3c72; transition: all 0.2s; font-weight: 600;" onmouseover="this.style.background='#2a5298';" onmouseout="this.style.background='#1e3c72';">🔬 Building Africa's Verified Datasets</span>
+                <span style="background: #e3edfb; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #4a7ab5; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#e3edfb'; this.style.color='#1e3c72';">Data Science Consulting</span>
+            </div>
         </div>
+    </section>
 
-        <!-- Slider Dots -->
-        <div class="slider-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-            <span class="dot" data-slide="3"></span>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section id="services">
-    <div class="container">
-        <h2 class="section-title">What We Do</h2>
-        <p class="section-subtitle">Research services designed to give you reliable, actionable insights — from market research to AI innovation.</p>
-
-        <!-- Core Research Services -->
-        <h3 style="text-align: center; font-size: 1.3rem; color: #1e3c72; margin: 40px 0 6px; font-weight: 600;">Core Research Services</h3>
-        <p style="text-align: center; color: #4a5b6e; max-width: 600px; margin: 0 auto 25px; font-size: 0.95rem;">Trusted research services that power better decisions today</p>
-
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto;">
-            <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Market Research</span>
-            <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Data Analysis</span>
-            <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Monitoring &amp; Evaluation</span>
-            <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Medical &amp; Pharma Research</span>
-            <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Professional Training</span>
-            <span style="background: #f4f7fa; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #eaeef3; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#f4f7fa'; this.style.color='#1e3c72';">Research Writing &amp; Support</span>
-        </div>
-
-        <!-- View All Core Services -->
-        <div style="text-align: center; margin-top: 25px;">
-            <a href="services.html#core-services" class="btn" style="background: #1e3c72; color: #fff; padding: 10px 30px; font-size: 0.9rem;">View All Core Services →</a>
-        </div>
-
-       <!-- Innovation & AI Services -->
-<h3 style="text-align: center; font-size: 1.3rem; color: #0b1e33; margin: 50px 0 6px; font-weight: 600;">Innovation &amp; AI Services</h3>
-<p style="text-align: center; color: #4a5b6e; max-width: 600px; margin: 0 auto 25px; font-size: 0.95rem;">Building the future of AI and innovation from Kenya</p>
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto;">
-    <span style="background: #e3edfb; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #4a7ab5; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#e3edfb'; this.style.color='#1e3c72';">AI Fact-Checking</span>
-    <span style="background: #1e3c72; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #fff; border: 1px solid #1e3c72; transition: all 0.2s; font-weight: 600;" onmouseover="this.style.background='#2a5298';" onmouseout="this.style.background='#1e3c72';">🔬 Building Africa's Verified Datasets</span>
-    <span style="background: #e3edfb; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72; border: 1px solid #4a7ab5; transition: all 0.2s;" onmouseover="this.style.background='#1e3c72'; this.style.color='#fff';" onmouseout="this.style.background='#e3edfb'; this.style.color='#1e3c72';">Data Science Consulting</span>
-</div>
     <!-- ===== WHO WE SERVE ===== -->
     <section id="clients" class="section-alt">
         <div class="container">
             <h2 class="section-title">Who We Serve</h2>
             <p class="section-subtitle">We tailor our research to meet the unique needs of different clients.</p>
-
             <div class="serve-grid">
                 <div class="serve-item">
                     <h4>For Researchers &amp; Academics</h4>
@@ -1543,7 +1380,6 @@ header {
         <div class="container">
             <h2 class="section-title">Our Process</h2>
             <p class="section-subtitle">A clear, transparent approach to delivering research that makes an impact.</p>
-
             <div class="process-steps">
                 <div class="step"><span class="num">1</span> Consult &amp; Define</div>
                 <div class="step"><span class="num">2</span> Proposal &amp; Plan</div>
@@ -1578,86 +1414,72 @@ header {
         </div>
     </section>
 
-<!-- ===== VISION TEASER ===== -->
-<section style="background: linear-gradient(135deg, #0b1e33, #1e3c72); color: #fff; padding: 70px 0; position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(74, 122, 181, 0.05); border-radius: 50%; pointer-events: none;"></div>
-    <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: rgba(74, 122, 181, 0.03); border-radius: 50%; pointer-events: none;"></div>
-    
-    <div class="container" style="position: relative; z-index: 1; text-align: center;">
-        <span style="background: #4a7ab5; padding: 4px 20px; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; display: inline-block; margin-bottom: 20px; font-weight: 600;">Scire 2030 Vision</span>
-        
-        <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 20px;">
-            Beyond Research: <span style="color: #7aafd4;">Building the Future</span>
-        </h2>
-        
-        <p style="font-size: 1.15rem; color: #b0c4de; max-width: 750px; margin: 0 auto 30px; line-height: 1.7;">
-            We're not just conducting research—we're building Africa's verified data infrastructure and the AI tools to analyze it. 
-            From our work with UNICEF and Kenya's Ministry of Health to our vision of a global innovation hub, we're laying the foundation for Africa's data-driven future.
-        </p>
-        
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0;">
-            <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="font-size: 2rem; font-weight: 700; color: #7aafd4;">📊</div>
-                <div style="font-size: 0.9rem; color: #b0c4de; margin-top: 8px;">Verified Data Infrastructure</div>
+    <!-- ===== VISION TEASER ===== -->
+    <section style="background: linear-gradient(135deg, #0b1e33, #1e3c72); color: #fff; padding: 70px 0; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(74, 122, 181, 0.05); border-radius: 50%; pointer-events: none;"></div>
+        <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: rgba(74, 122, 181, 0.03); border-radius: 50%; pointer-events: none;"></div>
+        <div class="container" style="position: relative; z-index: 1; text-align: center;">
+            <span style="background: #4a7ab5; padding: 4px 20px; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; display: inline-block; margin-bottom: 20px; font-weight: 600;">Scire 2030 Vision</span>
+            <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 20px;">Beyond Research: <span style="color: #7aafd4;">Building the Future</span></h2>
+            <p style="font-size: 1.15rem; color: #b0c4de; max-width: 750px; margin: 0 auto 30px; line-height: 1.7;">We're not just conducting research—we're building Africa's verified data infrastructure and the AI tools to analyze it. From our work with UNICEF and Kenya's Ministry of Health to our vision of a global innovation hub, we're laying the foundation for Africa's data-driven future.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0;">
+                <div style="text-align: center; flex: 1; min-width: 150px;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #7aafd4;">📊</div>
+                    <div style="font-size: 0.9rem; color: #b0c4de; margin-top: 8px;">Verified Data Infrastructure</div>
+                </div>
+                <div style="text-align: center; flex: 1; min-width: 150px;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #7aafd4;">🤖</div>
+                    <div style="font-size: 0.9rem; color: #b0c4de; margin-top: 8px;">AI-Powered Research Intelligence</div>
+                </div>
+                <div style="text-align: center; flex: 1; min-width: 150px;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #7aafd4;">🌍</div>
+                    <div style="font-size: 0.9rem; color: #b0c4de; margin-top: 8px;">Global Research Partnerships</div>
+                </div>
             </div>
-            <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="font-size: 2rem; font-weight: 700; color: #7aafd4;">🤖</div>
-                <div style="font-size: 0.9rem; color: #b0c4de; margin-top: 8px;">AI-Powered Research Intelligence</div>
-            </div>
-            <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="font-size: 2rem; font-weight: 700; color: #7aafd4;">🌍</div>
-                <div style="font-size: 0.9rem; color: #b0c4de; margin-top: 8px;">Global Research Partnerships</div>
-            </div>
+            <a href="vision.html" class="btn" style="background: #fff; color: #1e3c72; padding: 14px 45px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; box-shadow: 0 4px 20px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.2)';">📖 Read Our 50-Year Vision</a>
         </div>
-        
-        <a href="vision.html" class="btn" style="background: #fff; color: #1e3c72; padding: 14px 45px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; box-shadow: 0 4px 20px rgba(0,0,0,0.2);" 
-           onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.3)';" 
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.2)';">📖 Read Our 50-Year Vision</a>
-    </div>
-</section>
-    
-   <!-- ===== WHY CHOOSE US ===== -->
-<section id="about">
-    <div class="container">
-        <h2 class="section-title">Why Choose Us</h2>
-        <p class="section-subtitle">Your research partner with the right qualifications and experience — and a bold vision for the future.</p>
+    </section>
 
-        <div class="why-grid">
-            <div class="why-item">
-                <div class="icon">👨‍🔬</div>
-                <h4>Pharmacist + Statistician Team</h4>
-                <p>Unique partnership combining clinical expertise with data science for full-spectrum research.</p>
-            </div>
-            <div class="why-item">
-                <div class="icon">🏛️</div>
-                <h4>NASCOP &amp; BeGreen Experience</h4>
-                <p>Health data validation for Kenya's Ministry of Health and business verification for a UNICEF program.</p>
-            </div>
-            <div class="why-item">
-                <div class="icon">📊</div>
-                <h4>200+ Clients Analyzed</h4>
-                <p>Proven experience managing and analyzing large datasets as a Loan Officer, achieving a 30%+ error reduction.</p>
-            </div>
-            <div class="why-item">
-                <div class="icon">🤖</div>
-                <h4>AI &amp; GCP Certified</h4>
-                <p>ALX AI certification and CITI GCP credentials for ethical, modern research.</p>
-            </div>
-            <div class="why-item">
-                <div class="icon">🌍</div>
-                <h4>Building Africa's Data Future</h4>
-                <p>We're not just conducting research—we're building the infrastructure for Africa's AI-driven future.</p>
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">Your research partner with the right qualifications and experience — and a bold vision for the future.</p>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="icon">👨‍🔬</div>
+                    <h4>Pharmacist + Statistician Team</h4>
+                    <p>Unique partnership combining clinical expertise with data science for full-spectrum research.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">🏛️</div>
+                    <h4>NASCOP &amp; BeGreen Experience</h4>
+                    <p>Health data validation for Kenya's Ministry of Health and business verification for a UNICEF program.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">📊</div>
+                    <h4>200+ Clients Analyzed</h4>
+                    <p>Proven experience managing and analyzing large datasets as a Loan Officer, achieving a 30%+ error reduction.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">🤖</div>
+                    <h4>AI &amp; GCP Certified</h4>
+                    <p>ALX AI certification and CITI GCP credentials for ethical, modern research.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">🌍</div>
+                    <h4>Building Africa's Data Future</h4>
+                    <p>We're not just conducting research—we're building the infrastructure for Africa's AI-driven future.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- ===== TEAM ===== -->
     <section id="team" class="section-alt">
         <div class="container">
             <h2 class="section-title">Our Team</h2>
             <p class="section-subtitle">A unique partnership combining clinical expertise with data science for full-spectrum research.</p>
-
             <div class="team-grid">
                 <div class="team-card">
                     <img src="images/team/titus-adik.png" alt="Titus Adik" class="team-photo" loading="lazy">
@@ -1680,7 +1502,6 @@ header {
         <div class="container">
             <h2 class="section-title">What Our Clients Say</h2>
             <p class="section-subtitle">Real feedback from people we've worked with.</p>
-
             <div class="testimonial-grid">
                 <div class="testimonial-item">
                     <p class="quote">"Titus was meticulous in verifying our entrepreneurs' data. His attention to detail and professionalism ensured the success of our verification process."</p>
@@ -1696,52 +1517,45 @@ header {
         </div>
     </section>
 
- <!-- ===== BLOG ===== -->
-<section id="blog" class="section-alt">
-    <div class="container">
-        <h2 class="section-title">Latest Insights</h2>
-        <p class="section-subtitle">Thoughts on research, data, and decision-making in Kenya.</p>
-
-        <div class="blog-grid">
-            <!-- Blog Post 1: Domestic Borrowing -->
-            <div class="blog-card">
-                <div class="blog-icon">
-                    <img src="images/blog/borrowing.png" alt="Domestic Borrowing icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='📊'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
+    <!-- ===== BLOG ===== -->
+    <section id="blog" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <p class="section-subtitle">Thoughts on research, data, and decision-making in Kenya.</p>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-icon">
+                        <img src="images/blog/borrowing.png" alt="Domestic Borrowing icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='📊'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
+                    </div>
+                    <h3>Domestic Borrowing &amp; Growth</h3>
+                    <p>Analyzing the effects of domestic government borrowing on economic growth in Kenya using ARDL and threshold regression.</p>
+                    <a href="post-domestic-borrowing.html" class="read-more">Read more →</a>
                 </div>
-                <h3>Domestic Borrowing &amp; Growth</h3>
-                <p>Analyzing the effects of domestic government borrowing on economic growth in Kenya using ARDL and threshold regression.</p>
-                <a href="post-domestic-borrowing.html" class="read-more">Read more →</a>
-            </div>
-
-            <!-- Blog Post 2: AI Fact-Checking -->
-            <div class="blog-card">
-                <div class="blog-icon">
-                    <img src="images/blog/ai-factcheck.png" alt="AI Fact-Checking icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='🤖'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
+                <div class="blog-card">
+                    <div class="blog-icon">
+                        <img src="images/blog/ai-factcheck.png" alt="AI Fact-Checking icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='🤖'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
+                    </div>
+                    <h3>AI Fact-Checking in Kenya</h3>
+                    <p>Why verifying AI-generated claims with real local data matters for decision-making in East Africa.</p>
+                    <a href="post-ai-verification-puno.html" class="read-more">Read more →</a>
                 </div>
-                <h3>AI Fact-Checking in Kenya</h3>
-                <p>Why verifying AI-generated claims with real local data matters for decision-making in East Africa.</p>
-                <a href="post-ai-verification-puno.html" class="read-more">Read more →</a>
-            </div>
-
-            <!-- Blog Post 3: M&E for NGOs -->
-            <div class="blog-card">
-                <div class="blog-icon">
-                    <img src="images/blog/monitoring.png" alt="Monitoring & Evaluation icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='📋'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
+                <div class="blog-card">
+                    <div class="blog-icon">
+                        <img src="images/blog/monitoring.png" alt="Monitoring & Evaluation icon" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='📋'; this.parentElement.style.fontSize='4.5rem'; this.parentElement.style.lineHeight='1';">
+                    </div>
+                    <h3>M&amp;E for NGOs</h3>
+                    <p>How monitoring and evaluation frameworks can help NGOs measure impact and secure donor funding.</p>
+                    <a href="post-ai-vs-field-research.html" class="read-more">Read more →</a>
                 </div>
-                <h3>M&amp;E for NGOs</h3>
-                <p>How monitoring and evaluation frameworks can help NGOs measure impact and secure donor funding.</p>
-                <a href="post-ai-vs-field-research.html" class="read-more">Read more →</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- ===== FAQ ===== -->
     <section id="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <p class="section-subtitle">Quick answers to common questions about working with us.</p>
-
             <div class="faq-grid">
                 <div class="faq-item active">
                     <h4>What types of research do you handle? <span class="toggle">−</span></h4>
@@ -1768,7 +1582,6 @@ header {
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="section-subtitle">Have a research project? Let's discuss how we can help.</p>
-
             <div class="contact-grid">
                 <div class="contact-info-box">
                     <h3>Contact Details</h3>
@@ -1805,7 +1618,6 @@ header {
                         <p style="font-size: 0.9rem; color: #4a5b6e;">⏱️ We typically respond within 24 hours.</p>
                     </div>
                 </div>
-
                 <div class="contact-form-box">
                     <h3>Send Us a Message</h3>
                     <form id="contactForm" action="https://formspree.io/f/xqapkrbj" method="POST">
@@ -1862,247 +1674,230 @@ header {
     </section>
 
     <!-- ===== FOOTER ===== -->
-<!-- ===== FOOTER ===== -->
-<footer>
-    <div class="container">
-        <p>&copy; 2026 Scire Research. All rights reserved.</p>
-
-        <!-- Social Media Links -->
-        <div class="social-links" style="margin: 20px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <a href="https://twitter.com/scire_research" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-            </a>
-            <a href="https://linkedin.com/in/titus-adik" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61565875146590&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/ik_tito_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-            </a>
-            <a href="https://wa.me/254704813110" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.057 0C5.495 0 .16 5.335.16 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.812 11.812 0 0012.057 0zm0 2.185c5.36 0 9.707 4.35 9.707 9.707 0 5.358-4.347 9.707-9.707 9.707-2.117 0-4.132-.685-5.792-1.946l-.344-.249-3.72.976.994-3.626-.232-.355a9.64 9.64 0 01-1.47-5.097c0-5.358 4.347-9.707 9.707-9.707z"/>
-                </svg>
-            </a>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Scire Research. All rights reserved.</p>
+            <div class="social-links" style="margin: 20px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://twitter.com/scire_research" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/titus-adik" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61565875146590&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/ik_tito_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/254704813110" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.057 0C5.495 0 .16 5.335.16 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.812 11.812 0 0012.057 0zm0 2.185c5.36 0 9.707 4.35 9.707 9.707 0 5.358-4.347 9.707-9.707 9.707-2.117 0-4.132-.685-5.792-1.946l-.344-.249-3.72.976.994-3.626-.232-.355a9.64 9.64 0 01-1.47-5.097c0-5.358 4.347-9.707 9.707-9.707z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-links" style="margin-top: 15px;">
+                <a href="#services">Services</a>
+                <a href="#team">Team</a>
+                <a href="blog.html">Insights</a>
+                <a href="vision.html">Vision</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">Evidence for Better Decision Making</p>
         </div>
+    </footer>
 
-<!-- Footer Navigation Links -->
-<div class="footer-links" style="margin-top: 15px;">
-    <a href="#services">Services</a>
-    <a href="#team">Team</a>
-    <a href="blog.html">Insights</a>
-    <a href="vision.html">Vision</a> <!-- Add this -->
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-</div>
-        
-        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">Evidence for Better Decision Making</p>
-    </div>
-</footer>
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/254704813110" target="_blank" rel="noopener noreferrer"
+       style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:1000; text-decoration:none; transition: all 0.3s;"
+       aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
 
-<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-<a href="https://wa.me/254704813110" target="_blank" rel="noopener noreferrer"
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:1000; text-decoration:none; transition: all 0.3s;"
-   aria-label="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-</a>
-
-    
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const stats = document.querySelectorAll('.stat-number');
-    
-    const animateNumber = (el) => {
-        const target = parseInt(el.textContent.replace(/[^0-9]/g, ''));
-        const increment = Math.ceil(target / 40);
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                el.textContent = target + (el.textContent.includes('%') ? '%' : '+');
-                clearInterval(timer);
-            } else {
-                el.textContent = current + (el.textContent.includes('%') ? '%' : '+');
-            }
-        }, 30);
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateNumber(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    });
-    
-    stats.forEach(stat => observer.observe(stat));
-});
-</script>
-
-<script>
-<script>
-    // ===== HERO SLIDER WITH VIDEO SYNC =====
-    document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.hero-slide');
-        const dots = document.querySelectorAll('.slider-dots .dot');
-        const video1 = document.getElementById('video1');
-        const video2 = document.getElementById('video2');
-        let currentSlide = 0;
-        let slideInterval;
-
-        // Function to switch videos
-        function switchVideo(videoNumber) {
-            if (videoNumber === 1) {
-                video1.style.opacity = '1';
-                video2.style.opacity = '0';
-                // Ensure video1 plays
-                video1.play().catch(function(e) {});
-                video2.pause();
-            } else {
-                video1.style.opacity = '0';
-                video2.style.opacity = '1';
-                // Ensure video2 plays
-                video2.play().catch(function(e) {});
-                video1.pause();
-            }
-        }
-
-        // Function to show a specific slide
-        function showSlide(index) {
-            // Hide all slides
-            slides.forEach(slide => {
-                slide.classList.remove('active');
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // ===== STATS ANIMATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const stats = document.querySelectorAll('.stat-number');
+            const animateNumber = (el) => {
+                const target = parseInt(el.textContent.replace(/[^0-9]/g, ''));
+                const increment = Math.ceil(target / 40);
+                let current = 0;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        el.textContent = target + (el.textContent.includes('%') ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        el.textContent = current + (el.textContent.includes('%') ? '%' : '+');
+                    }
+                }, 30);
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumber(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
             });
-            
-            // Show the target slide
-            if (slides[index]) {
-                slides[index].classList.add('active');
-                // Switch video based on data-video attribute
-                const videoNum = slides[index].getAttribute('data-video');
-                if (videoNum) {
-                    switchVideo(parseInt(videoNum));
+            stats.forEach(stat => observer.observe(stat));
+        });
+
+        // ===== HERO SLIDER WITH VIDEO SYNC =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.slider-dots .dot');
+            const video1 = document.getElementById('video1');
+            const video2 = document.getElementById('video2');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function switchVideo(videoNumber) {
+                if (videoNumber === 1) {
+                    video1.style.opacity = '1';
+                    video2.style.opacity = '0';
+                    video1.play().catch(function(e) {});
+                    video2.pause();
+                } else {
+                    video1.style.opacity = '0';
+                    video2.style.opacity = '1';
+                    video2.play().catch(function(e) {});
+                    video1.pause();
                 }
             }
-            
-            // Update dots
-            dots.forEach(dot => {
-                dot.classList.remove('active');
+
+            function showSlide(index) {
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                if (slides[index]) {
+                    slides[index].classList.add('active');
+                    const videoNum = slides[index].getAttribute('data-video');
+                    if (videoNum) {
+                        switchVideo(parseInt(videoNum));
+                    }
+                }
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                if (dots[index]) {
+                    dots[index].classList.add('active');
+                }
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function startAutoRotate() {
+                if (slideInterval) clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 6000);
+            }
+
+            function stopAutoRotate() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                    slideInterval = null;
+                }
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    stopAutoRotate();
+                    showSlide(index);
+                    startAutoRotate();
+                });
             });
-            if (dots[index]) {
-                dots[index].classList.add('active');
+
+            const sliderContainer = document.querySelector('.hero-slider');
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', stopAutoRotate);
+                sliderContainer.addEventListener('mouseleave', startAutoRotate);
             }
-            
-            currentSlide = index;
-        }
 
-        // Function to go to the next slide
-        function nextSlide() {
-            const next = (currentSlide + 1) % slides.length;
-            showSlide(next);
-        }
+            // Initialize
+            showSlide(0);
+            video1.play().catch(function(e) {});
+            video2.play().catch(function(e) {});
+            video2.pause();
+            startAutoRotate();
+        });
 
-        // Start auto-rotation
-        function startAutoRotate() {
-            if (slideInterval) clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 6000);
-        }
+        // ===== MOBILE MENU TOGGLE =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeMenu = document.getElementById('closeMenu');
+            const body = document.body;
 
-        function stopAutoRotate() {
-            if (slideInterval) {
-                clearInterval(slideInterval);
-                slideInterval = null;
+            function openMenu() {
+                hamburger.classList.add('active');
+                mobileMenu.classList.add('open');
+                body.style.overflow = 'hidden';
             }
-        }
 
-        // Click on dots to navigate
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', function() {
-                stopAutoRotate();
-                showSlide(index);
-                startAutoRotate();
+            function closeMenuFunc() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('open');
+                body.style.overflow = '';
+            }
+
+            hamburger.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('open')) {
+                    closeMenuFunc();
+                } else {
+                    openMenu();
+                }
+            });
+
+            closeMenu.addEventListener('click', closeMenuFunc);
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenuFunc);
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                    closeMenuFunc();
+                }
             });
         });
 
-        // Pause on hover
-        const sliderContainer = document.querySelector('.hero-slider');
-        if (sliderContainer) {
-            sliderContainer.addEventListener('mouseenter', stopAutoRotate);
-            sliderContainer.addEventListener('mouseleave', startAutoRotate);
-        }
-
-        // Initialize
-        showSlide(0);
-        
-        // Start playing both videos initially (autoplay with sound off)
-        video1.play().catch(function(e) {});
-        video2.play().catch(function(e) {});
-        // Pause video2 initially since video1 is visible
-        video2.pause();
-        
-        startAutoRotate();
-    });
-</script>
-    // ===== MOBILE MENU TOGGLE =====
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenu = document.getElementById('closeMenu');
-        const body = document.body;
-
-        // Open menu
-        function openMenu() {
-            hamburger.classList.add('active');
-            mobileMenu.classList.add('open');
-            body.style.overflow = 'hidden'; // Prevent scroll
-        }
-
-        // Close menu
-        function closeMenuFunc() {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('open');
-            body.style.overflow = ''; // Restore scroll
-        }
-
-        // Toggle on hamburger click
-        hamburger.addEventListener('click', function() {
-            if (mobileMenu.classList.contains('open')) {
-                closeMenuFunc();
-            } else {
-                openMenu();
-            }
+        // ===== FAQ TOGGLE =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const isActive = this.classList.contains('active');
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    if (!isActive) {
+                        this.classList.add('active');
+                    }
+                    // Update toggle symbols
+                    faqItems.forEach(i => {
+                        const toggle = i.querySelector('.toggle');
+                        if (i.classList.contains('active')) {
+                            toggle.textContent = '−';
+                        } else {
+                            toggle.textContent = '+';
+                        }
+                    });
+                });
+            });
         });
-
-        // Close on close button click
-        closeMenu.addEventListener('click', closeMenuFunc);
-
-        // Close on link click (optional)
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenuFunc);
-        });
-
-        // Close on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-                closeMenuFunc();
-            }
-        });
-    });
-</script>
-    
+    </script>
 </body>
 
 </html>
