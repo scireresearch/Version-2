@@ -13,6 +13,98 @@
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cline x1='62' y1='62' x2='82' y2='82' stroke='%23e67e22' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='45' r='28' fill='none' stroke='%231a5276' stroke-width='5'/%3E%3Cpath d='M35,25 Q45,35 35,45 Q25,55 35,65' fill='none' stroke='%23e67e22' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M55,25 Q45,35 55,45 Q65,55 55,65' fill='none' stroke='%23148f8f' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='45' r='3' fill='%23e67e22'/%3E%3C/svg%3E">
 
     <style>
+/* ===== WHO WE SERVE - RESPONSIVE ===== */
+.serve-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.serve-item {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border-left: 4px solid #1e3c72;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s;
+}
+
+.serve-item:hover {
+    transform: translateY(-4px);
+}
+
+.serve-item h4 {
+    font-size: 1.1rem;
+    color: #1e3c72;
+    margin-bottom: 6px;
+}
+
+.serve-item p {
+    color: #3d4e62;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.serve-item .badge {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.65rem;
+    background: #e3edfb;
+    color: #1e3c72;
+    padding: 2px 12px;
+    border-radius: 12px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 1024px) {
+    .serve-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serve-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 100%;
+    }
+    .serve-item {
+        padding: 18px 15px;
+    }
+    .serve-item h4 {
+        font-size: 0.95rem;
+    }
+    .serve-item p {
+        font-size: 0.85rem;
+    }
+    .serve-item .badge {
+        font-size: 0.6rem;
+        padding: 2px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .serve-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 15px;
+    }
+    .serve-item {
+        padding: 20px 16px;
+        border-left-width: 3px;
+    }
+    .serve-item h4 {
+        font-size: 1rem;
+    }
+    .serve-item p {
+        font-size: 0.85rem;
+    }
+}
+        
 /* ===== PROCESS SECTION ===== */
 @media (max-width: 1024px) {
     .process-grid {
@@ -1885,28 +1977,164 @@
             </div>
         </div>
     </section>
+<!-- ===== WHO WE SERVE ===== -->
+<section id="clients" class="section-alt">
+    <div class="container">
+        <h2 class="section-title">Who We Serve</h2>
+        <p class="section-subtitle">From research clients to global partners — we tailor our work to meet the unique needs of each audience.</p>
 
-    <!-- ===== WHO WE SERVE ===== -->
-    <section id="clients" class="section-alt">
-        <div class="container">
-            <h2 class="section-title">Who We Serve</h2>
-            <p class="section-subtitle">We tailor our research to meet the unique needs of different clients.</p>
-            <div class="serve-grid">
-                <div class="serve-item">
-                    <h4>For Researchers &amp; Academics</h4>
-                    <p>Data analysis, AI fact-checking, research writing, and publication support.</p>
-                </div>
-                <div class="serve-item">
-                    <h4>For Businesses</h4>
-                    <p>Market research, customer insights, competitor analysis, and data-driven strategy to help you grow.</p>
-                </div>
-                <div class="serve-item">
-                    <h4>For NGOs &amp; Donors</h4>
-                    <p>M&E frameworks, impact evaluations, baseline & endline surveys, and donor reporting.</p>
-                </div>
+        <div class="serve-grid">
+
+            <!-- 1. Researchers & Academics -->
+            <div class="serve-item">
+                <h4>For Researchers &amp; Academics</h4>
+                <p>Data analysis, AI fact-checking, research writing, publication support, and collaborative research.</p>
             </div>
+
+            <!-- 2. Businesses -->
+            <div class="serve-item">
+                <h4>For Businesses</h4>
+                <p>Market research, customer insights, competitor analysis, and data-driven strategy to help you grow.</p>
+            </div>
+
+            <!-- 3. NGOs & Donors -->
+            <div class="serve-item">
+                <h4>For NGOs &amp; Donors</h4>
+                <p>M&E frameworks, impact evaluations, baseline &amp; endline surveys, and donor reporting.</p>
+            </div>
+
+            <!-- 4. Government & Policy Makers -->
+            <div class="serve-item" style="border-left-color: #4a7ab5;">
+                <h4>For Government &amp; Policy Makers</h4>
+                <p>Policy research, data validation, compliance auditing, and AI sovereignty tools for government agencies.</p>
+
+            </div>
+
+            <!-- 5. Tech Companies & AI Startups -->
+            <div class="serve-item" style="border-left-color: #4a7ab5;">
+                <h4>For Tech Companies &amp; AI Startups</h4>
+                <p>Verified datasets, AI fact-checking, data science consulting, and compliance auditing for the AI economy.</p>
+
+            </div>
+
+            <!-- 6. Healthcare Organizations -->
+            <div class="serve-item" style="border-left-color: #4a7ab5;">
+                <h4>For Healthcare Organizations</h4>
+                <p>Clinical research support, pharmaceutical data analysis, patient surveys, and GCP-compliant studies.</p>
+
+            </div>
+
+            <!-- 7. International Development Partners -->
+            <div class="serve-item">
+                <h4>For International Development Partners</h4>
+                <p>Impact evaluations, data collection, field research, and AI-powered decision intelligence for global programs.</p>
+
+            </div>
+
+            <!-- 8. Research Institutions & Think Tanks -->
+            <div class="serve-item" style="border-left-color: #4a7ab5;">
+                <h4>For Research Institutions &amp; Think Tanks</h4>
+                <p>Collaborative research, data sharing, joint publications, and AI research partnerships.</p>
+
+            </div>
+
+            <!-- 9. Investors & Funders -->
+            <div class="serve-item">
+                <h4>For Investors &amp; Funders</h4>
+                <p>Due diligence research, market intelligence, and data-driven investment insights to inform your decisions.</p>
+
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+   <!-- ===== WHO WE SERVE ===== -->
+<section id="clients" class="section-alt">
+    <div class="container">
+        <h2 class="section-title">Who We Serve</h2>
+        <p class="section-subtitle">From research clients to global partners — we tailor our work to meet the unique needs of each audience.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1020px; margin: 0 auto;">
+
+            <!-- === RESEARCH CLIENTS === -->
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #1e3c72; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For Researchers &amp; Academics</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Data analysis, AI fact-checking, research writing, publication support, and collaborative research.</p>
+            </div>
+
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #1e3c72; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For Businesses</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Market research, customer insights, competitor analysis, and data-driven strategy to help you grow.</p>
+            </div>
+
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #1e3c72; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For NGOs &amp; Donors</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">M&E frameworks, impact evaluations, baseline &amp; endline surveys, and donor reporting.</p>
+            </div>
+
+            <!-- === GOVERNMENT & POLICY === -->
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #4a7ab5; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For Government &amp; Policy Makers</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Policy research, data validation, compliance auditing, and AI sovereignty tools for government agencies.</p>
+                <span style="display: inline-block; margin-top: 6px; font-size: 0.65rem; background: #e3edfb; color: #1e3c72; padding: 2px 12px; border-radius: 12px;">Trusted by Kenya's Ministry of Health</span>
+            </div>
+
+            <!-- === TECH & AI STARTUPS === -->
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #4a7ab5; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For Tech Companies &amp; AI Startups</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Verified datasets, AI fact-checking, data science consulting, and compliance auditing for the AI economy.</p>
+                <span style="display: inline-block; margin-top: 6px; font-size: 0.65rem; background: #e3edfb; color: #1e3c72; padding: 2px 12px; border-radius: 12px;">Building Africa's Data Infrastructure</span>
+            </div>
+
+            <!-- === HEALTHCARE === -->
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #4a7ab5; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For Healthcare Organizations</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Clinical research support, pharmaceutical data analysis, patient surveys, and GCP-compliant studies.</p>
+                <span style="display: inline-block; margin-top: 6px; font-size: 0.65rem; background: #e3edfb; color: #1e3c72; padding: 2px 12px; border-radius: 12px;">Pharmacist + Statistician Team</span>
+            </div>
+
+            <!-- === INTERNATIONAL DEVELOPMENT === -->
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #1e3c72; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For International Development Partners</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Impact evaluations, data collection, field research, and AI-powered decision intelligence for global programs.</p>
+                <span style="display: inline-block; margin-top: 6px; font-size: 0.65rem; background: #e3edfb; color: #1e3c72; padding: 2px 12px; border-radius: 12px;">Trusted by UNICEF</span>
+            </div>
+
+            <!-- === RESEARCH INSTITUTIONS === -->
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #4a7ab5; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For Research Institutions &amp; Think Tanks</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Collaborative research, data sharing, joint publications, and AI research partnerships.</p>
+                <span style="display: inline-block; margin-top: 6px; font-size: 0.65rem; background: #e3edfb; color: #1e3c72; padding: 2px 12px; border-radius: 12px;">Global Research Partnerships</span>
+            </div>
+
+            <!-- === INVESTORS & FUNDERS === -->
+            <div style="background: #fff; padding: 25px 20px; border-radius: 12px; border-left: 4px solid #1e3c72; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" 
+                 onmouseover="this.style.transform='translateY(-4px)';" 
+                 onmouseout="this.style.transform='translateY(0)';">
+                <h4 style="font-size: 1.1rem; color: #1e3c72; margin-bottom: 6px;">For Investors &amp; Funders</h4>
+                <p style="color: #3d4e62; font-size: 0.9rem;">Due diligence research, market intelligence, and data-driven investment insights to inform your decisions.</p>
+                <span style="display: inline-block; margin-top: 6px; font-size: 0.65rem; background: #e3edfb; color: #1e3c72; padding: 2px 12px; border-radius: 12px;">Evidence for Better Decisions</span>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- ===== OUR PROCESS ===== -->
 <section style="padding: 80px 0; background: #fafbfc;">
