@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scire 2030 – Our Vision for the Future of Research Intelligence</title>
-    <meta name="description" content="Scire Research's 50-year vision: Building Africa's verified data infrastructure and global research intelligence hub.">
+    <meta name="description"
+        content="Scire Research's 50-year vision: Building Africa's verified data infrastructure, AI intelligence, and global research partnerships from Kenya.">
 
-    <!-- ===== FAVICON ===== -->
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cline x1='62' y1='62' x2='82' y2='82' stroke='%23e67e22' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='45' r='28' fill='none' stroke='%231a5276' stroke-width='5'/%3E%3Cpath d='M35,25 Q45,35 35,45 Q25,55 35,65' fill='none' stroke='%23e67e22' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M55,25 Q45,35 55,45 Q65,55 55,65' fill='none' stroke='%23148f8f' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='45' r='3' fill='%23e67e22'/%3E%3C/svg%3E">
 
     <style>
-        /* ===== RESET & BASE ===== */
+        /* ============================================================ */
+        /* RESET & BASE                                                 */
+        /* ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -34,7 +36,8 @@
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4 {
             font-weight: 700;
             line-height: 1.2;
         }
@@ -49,7 +52,9 @@
             color: #4a7ab5;
         }
 
-        /* ===== BUTTONS ===== */
+        /* ============================================================ */
+        /* BUTTONS                                                      */
+        /* ============================================================ */
         .btn {
             display: inline-block;
             background: #1e3c72;
@@ -69,39 +74,68 @@
             transform: translateY(-2px);
         }
 
-        .btn-outline {
-            background: transparent;
-            color: #1e3c72;
-            border: 2px solid #1e3c72;
-        }
-
-        .btn-outline:hover {
-            background: #1e3c72;
-            color: #fff;
-        }
-
         .btn-small {
-            padding: 8px 20px;
-            font-size: 0.9rem;
+            padding: 6px 18px;
+            font-size: 0.8rem;
             background: transparent;
-            color: #1e3c72;
-            border: 2px solid #1e3c72;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
         }
 
         .btn-small:hover {
-            background: #1e3c72;
-            color: #fff;
+            background: #fff;
+            color: #1e3c72;
+            border-color: #fff;
+            transform: translateY(-2px);
         }
 
-        /* ===== HEADER ===== */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            color: #0b1e33;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #4a5b6e;
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        /* ============================================================ */
+        /* HEADER - ENCLOSED ON HERO                                   */
+        /* ============================================================ */
         header {
-            background: #fff;
-            padding: 16px 0;
-            border-bottom: 1px solid #eaeef3;
-            position: sticky;
-            top: 0;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
             z-index: 100;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 0;
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-enclosed {
+            background: rgba(11, 30, 51, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 10px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
         .header-content {
@@ -116,11 +150,12 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
+            flex-shrink: 0;
         }
 
         .logo svg {
-            height: 45px;
+            height: 35px;
             width: auto;
             flex-shrink: 0;
         }
@@ -129,57 +164,97 @@
             display: flex;
             flex-direction: column;
             line-height: 1.1;
-            min-width: 0;
-            flex: 1;
         }
 
         .logo-text .main {
-            font-size: 2rem;
+            font-size: 1.3rem;
             font-weight: 800;
-            color: #1e3c72;
+            color: #fff;
             letter-spacing: -0.5px;
             white-space: nowrap;
-            width: 100%;
-            display: block;
         }
 
         .logo-text .main span {
-            color: #4a7ab5;
+            color: #7aafd4;
         }
 
         .logo-text .tagline {
-            font-size: 0.7rem;
+            font-size: 0.5rem;
             font-weight: 400;
-            color: #4a5b6e;
+            color: rgba(255, 255, 255, 0.8);
             letter-spacing: 0.5px;
             text-transform: uppercase;
             white-space: nowrap;
-            width: 100%;
-            display: block;
         }
 
-        /* ===== NAVIGATION ===== */
+        /* ===== DESKTOP NAV ===== */
         .desktop-nav {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .desktop-nav a {
             font-weight: 500;
-            color: #2c3e50;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.85rem;
+            transition: color 0.2s;
+            white-space: nowrap;
         }
 
         .desktop-nav a:hover {
-            color: #1e3c72;
+            color: #fff;
         }
 
         .desktop-nav a.active {
-            color: #1e3c72;
+            color: #fff;
             font-weight: 600;
         }
 
-        /* ===== HAMBURGER MENU ===== */
+        /* ===== SCROLLED STATE ===== */
+        header.scrolled .header-enclosed {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid #eaeef3;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header.scrolled .logo-text .main {
+            color: #1e3c72;
+        }
+
+        header.scrolled .logo-text .main span {
+            color: #4a7ab5;
+        }
+
+        header.scrolled .logo-text .tagline {
+            color: #4a5b6e;
+        }
+
+        header.scrolled .desktop-nav a {
+            color: #2c3e50;
+        }
+
+        header.scrolled .desktop-nav a:hover {
+            color: #1e3c72;
+        }
+
+        header.scrolled .desktop-nav .btn-small {
+            color: #1e3c72;
+            border: 2px solid #1e3c72;
+        }
+
+        header.scrolled .desktop-nav .btn-small:hover {
+            background: #1e3c72;
+            color: #fff;
+        }
+
+        header.scrolled .hamburger .bar {
+            background: #1e3c72;
+        }
+
+        /* ===== HAMBURGER ===== */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -193,7 +268,7 @@
             display: block;
             width: 28px;
             height: 3px;
-            background: #1e3c72;
+            background: #fff;
             border-radius: 3px;
             transition: all 0.3s ease;
         }
@@ -210,7 +285,7 @@
             transform: translateY(-8px) rotate(-45deg);
         }
 
-        /* ===== MOBILE MENU OVERLAY ===== */
+        /* ===== MOBILE MENU ===== */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -285,83 +360,197 @@
             .desktop-nav {
                 display: none;
             }
+
             .hamburger {
                 display: flex;
             }
+
+            .header-enclosed {
+                padding: 8px 16px;
+                border-radius: 30px;
+            }
+
             .logo-text .main {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
+
             .logo-text .tagline {
-                font-size: 0.55rem;
+                font-size: 0.4rem;
             }
+
             .logo svg {
-                height: 35px;
+                height: 28px;
             }
         }
 
         @media (min-width: 769px) {
+            .hamburger {
+                display: none;
+            }
+
             .mobile-menu-overlay {
                 display: none;
             }
         }
 
-        /* ===== PAGE HEADER ===== */
-        .page-header {
-            background: linear-gradient(135deg, #0b1e33, #1a3a5c);
-            color: #fff;
-            padding: 80px 0 60px;
-            text-align: center;
+        /* ============================================================ */
+        /* HERO SLIDER WITH VIDEO                                      */
+        /* ============================================================ */
+        .hero {
             position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
+            background: #0b1e33;
         }
 
-        .page-header::before {
-            content: '';
+        .bg-video {
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(74, 122, 181, 0.08), transparent 70%);
-            border-radius: 50%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(1.3) contrast(1.1);
+        }
+
+        .bg-video source+img {
+            display: none;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
             pointer-events: none;
         }
 
-        .page-header h1 {
-            font-size: 3.2rem;
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            max-width: 900px;
+        }
+
+        .hero-slider {
+            position: relative;
+            min-height: 300px;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transform: translateY(20px);
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            visibility: visible;
+            position: relative;
+        }
+
+        .hero-slide h1 {
+            font-size: 2.8rem;
             margin-bottom: 16px;
-            position: relative;
-            z-index: 1;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
         }
 
-        .page-header h1 span {
-            color: #7aafd4;
+        .hero-slide .highlight {
+            border-bottom: 4px solid #4a7ab5;
         }
 
-        .page-header p {
+        .hero-slide p {
             font-size: 1.2rem;
-            color: #b0c4de;
+            color: #e8edf5;
             max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
+            margin: 0 auto 30px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .page-header .badge {
+        .hero-slide .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .slider-dots .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
             display: inline-block;
-            background: #4a7ab5;
-            padding: 4px 20px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
         }
 
-        /* ===== SECTIONS ===== */
+        .slider-dots .dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(1.2);
+        }
+
+        .slider-dots .dot.active {
+            background: #4a7ab5;
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-slide h1 {
+                font-size: 2rem;
+            }
+
+            .hero-slide p {
+                font-size: 1rem;
+            }
+
+            .hero-slider {
+                min-height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slide h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero-slide .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-slider {
+                min-height: 400px;
+            }
+        }
+
+        /* ============================================================ */
+        /* SECTIONS                                                     */
+        /* ============================================================ */
         section {
             padding: 70px 0;
         }
@@ -370,22 +559,9 @@
             background: #f4f7fa;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 12px;
-            color: #0b1e33;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #4a5b6e;
-            max-width: 650px;
-            margin: 0 auto 50px;
-        }
-
-        /* ===== VISION GRID ===== */
+        /* ============================================================ */
+        /* VISION GRID                                                  */
+        /* ============================================================ */
         .vision-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -427,7 +603,23 @@
             line-height: 1.6;
         }
 
-        /* ===== TIMELINE ===== */
+        @media (max-width: 1024px) {
+            .vision-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vision-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+        }
+
+        /* ============================================================ */
+        /* TIMELINE                                                     */
+        /* ============================================================ */
         .timeline {
             max-width: 900px;
             margin: 0 auto;
@@ -496,7 +688,19 @@
             margin-top: 8px;
         }
 
-        /* ===== CREDIBILITY ===== */
+        @media (max-width: 768px) {
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 20px;
+            }
+        }
+
+        /* ============================================================ */
+        /* CREDIBILITY GRID                                             */
+        /* ============================================================ */
         .credibility-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -536,7 +740,125 @@
             color: #4a5b6e;
         }
 
-        /* ===== CTA SECTION ===== */
+        @media (max-width: 1024px) {
+            .credibility-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .credibility-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+        }
+
+        /* ============================================================ */
+        /* WHY AFRICA BOX                                               */
+        /* ============================================================ */
+        .why-africa-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eaeef3;
+        }
+
+        .why-africa-box .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .why-africa-box .header .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .why-africa-box .header h2 {
+            font-size: 1.8rem;
+            color: #0b1e33;
+            margin-bottom: 12px;
+        }
+
+        .why-africa-box .header p {
+            font-size: 1.05rem;
+            color: #4a5b6e;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .why-africa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .why-africa-grid .item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .why-africa-grid .item .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .why-africa-grid .item h4 {
+            color: #1e3c72;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .why-africa-grid .item p {
+            color: #4a5b6e;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .why-africa-box .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeef3;
+        }
+
+        .why-africa-box .footer p {
+            color: #4a5b6e;
+            font-size: 0.95rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .why-africa-box .footer p strong {
+            color: #1e3c72;
+        }
+
+        @media (max-width: 1024px) {
+            .why-africa-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-africa-box {
+                padding: 30px 20px;
+            }
+
+            .why-africa-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+
+        /* ============================================================ */
+        /* CTA SECTION                                                  */
+        /* ============================================================ */
         .cta-section {
             background: linear-gradient(135deg, #0b1e33, #1e3c72);
             color: #fff;
@@ -583,7 +905,15 @@
             border-color: #fff;
         }
 
-        /* ===== FOOTER ===== */
+        @media (max-width: 768px) {
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* ============================================================ */
+        /* FOOTER                                                       */
+        /* ============================================================ */
         footer {
             background: #0b1e33;
             color: #b0c4de;
@@ -629,53 +959,23 @@
             height: 20px;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .vision-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
-            }
-            .credibility-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
-            }
-        }
-
+        /* ============================================================ */
+        /* RESPONSIVE - GENERAL                                         */
+        /* ============================================================ */
         @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2.2rem;
-            }
-            .page-header p {
-                font-size: 1rem;
-            }
-            .vision-grid {
-                grid-template-columns: 1fr;
-                max-width: 100%;
-            }
-            .credibility-grid {
-                grid-template-columns: 1fr;
-                max-width: 100%;
-            }
-            .timeline {
-                padding-left: 20px;
-            }
-            .timeline-item {
-                padding-left: 20px;
-            }
             .section-title {
                 font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                margin: 0 auto 30px;
             }
         }
 
         @media (max-width: 480px) {
-            .page-header h1 {
-                font-size: 1.8rem;
-            }
-            .page-header {
-                padding: 50px 0 40px;
-            }
-            .cta-section h2 {
-                font-size: 1.6rem;
+            section {
+                padding: 40px 0;
             }
         }
     </style>
@@ -683,40 +983,42 @@
 
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header>
+    <!-- ============================================================ -->
+    <!-- HEADER - ENCLOSED ON HERO                                    -->
+    <!-- ============================================================ -->
+    <header id="mainHeader">
         <div class="container">
-            <div class="header-content">
-                <!-- Logo -->
-                <div class="logo">
-                    <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="62" y1="62" x2="82" y2="82" stroke="#e67e22" stroke-width="6" stroke-linecap="round" />
-                        <circle cx="45" cy="45" r="28" fill="none" stroke="#1a5276" stroke-width="5" />
-                        <path d="M35,25 Q45,35 35,45 Q25,55 35,65" fill="none" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round" />
-                        <path d="M55,25 Q45,35 55,45 Q65,55 55,65" fill="none" stroke="#148f8f" stroke-width="2.5" stroke-linecap="round" />
-                        <circle cx="45" cy="45" r="3" fill="#e67e22" />
-                    </svg>
-                    <div class="logo-text">
-                        <span class="main">Scire <span>Research</span></span>
-                        <span class="tagline">Evidence for Better Decision-Making</span>
+            <div class="header-enclosed">
+                <div class="header-content">
+                    <div class="logo">
+                        <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="62" y1="62" x2="82" y2="82" stroke="#e67e22" stroke-width="6"
+                                stroke-linecap="round" />
+                            <circle cx="45" cy="45" r="28" fill="none" stroke="#1a5276" stroke-width="5" />
+                            <path d="M35,25 Q45,35 35,45 Q25,55 35,65" fill="none" stroke="#e67e22" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <path d="M55,25 Q45,35 55,45 Q65,55 55,65" fill="none" stroke="#148f8f" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <circle cx="45" cy="45" r="3" fill="#e67e22" />
+                        </svg>
+                        <div class="logo-text">
+                            <span class="main">Scire <span>Research</span></span>
+                            <span class="tagline">The Foundation for Africa's Data-Driven Future</span>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Navigation (Desktop) -->
-                <nav class="desktop-nav">
-                    <a href="index.html">Home</a>
-                    <a href="index.html#services">Services</a>
-                    <a href="index.html#team">Team</a>
-                    <a href="blog.html">Insights</a>
-                    <a href="vision.html" class="active">Vision</a>
-                    <a href="index.html#contact" class="btn btn-small">Contact</a>
-                </nav>
-
-                <!-- Hamburger Menu (Mobile) -->
-                <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                    <nav class="desktop-nav">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="who-we-serve.html">Clients</a>
+                        <a href="blog.html">Insights</a>
+                        <a href="vision.html" class="active">Vision</a>
+                        <a href="index.html#contact" class="btn-small">Contact</a>
+                    </nav>
+                    <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -727,292 +1029,464 @@
         <div class="mobile-menu-close" id="closeMenu">✕</div>
         <nav class="mobile-nav">
             <a href="index.html">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#team">Team</a>
+            <a href="services.html">Services</a>
+            <a href="who-we-serve.html">Clients</a>
             <a href="blog.html">Insights</a>
             <a href="vision.html">Vision</a>
             <a href="index.html#contact" class="btn">Contact</a>
         </nav>
     </div>
 
-    <!-- ===== PAGE HEADER ===== -->
-    <section class="page-header">
+    <!-- ============================================================ -->
+    <!-- HERO WITH VIDEO SLIDER                                       -->
+    <!-- ============================================================ -->
+    <section class="hero">
+        <!-- Video 1 -->
+        <video class="bg-video" id="video1" muted loop playsinline
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 1; transition: opacity 1.5s ease; filter: brightness(1.3) contrast(1.1);">
+            <source src="videos/vision-background-video.mp4" type="video/mp4">
+            <img src="images/background/graph-trend.png" alt="Data visualization background"
+                style="width: 100%; height: 100%; object-fit: cover;">
+        </video>
+
+        <!-- Video 2 -->
+        <video class="bg-video" id="video2" muted loop playsinline
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; transition: opacity 1.5s ease; filter: brightness(1.3) contrast(1.1);">
+            <source src="videos/background-video-2.mp4" type="video/mp4">
+            <img src="images/background/field-research.jpg" alt="Field research background"
+                style="width: 100%; height: 100%; object-fit: cover;">
+        </video>
+
+        <div class="overlay"></div>
+
         <div class="container">
-            <span class="badge">Scire 2030 Vision</span>
-            <h1>Building Africa's <span>Verified Data Infrastructure</span></h1>
-            <p>The next generation of global research will be built on diverse, locally-verified data. We're building the infrastructure, tools, and partnerships to make that future a reality—starting in Kenya, scaling globally.</p>
+            <div class="hero-slider">
+                <!-- Slide 1: Vision First -->
+                <div class="hero-slide active" data-video="1">
+                    <h1>Building Africa's <span class="highlight">Verified Data Infrastructure</span> &amp; AI
+                        Intelligence</h1>
+                    <p>The next generation of global research and AI will be built on diverse, locally-verified data.
+                        We're building the infrastructure, tools, and partnerships to make that future a reality —
+                        starting in Kenya, scaling globally.</p>
+                    <div class="btn-group">
+                        <a href="#vision" class="btn" style="background: #4a7ab5; color: #fff;">Explore Our Vision</a>
+                        <a href="#roadmap" class="btn" style="background: transparent; border: 2px solid #fff;">Our
+                            50-Year Roadmap</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Our Moonshot -->
+                <div class="hero-slide" data-video="2">
+                    <h1>The African <span class="highlight">Research Intelligence</span> Initiative</h1>
+                    <p>Building the first continent-wide, locally-validated research dataset ecosystem — spanning
+                        health, agriculture, economics, education, governance, and climate.</p>
+                    <div class="btn-group">
+                        <a href="#moonshot" class="btn" style="background: #4a7ab5; color: #fff;">Learn More</a>
+                        <a href="#why-africa" class="btn" style="background: transparent; border: 2px solid #fff;">Why
+                            Africa</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Why Africa -->
+                <div class="hero-slide" data-video="1">
+                    <h1>Why <span class="highlight">Africa</span>?</h1>
+                    <p>54 countries, 2,000+ languages, the world's youngest population, and rapid digital adoption —
+                        Africa is not just our home, it's our strategic advantage in building the future of global
+                        research intelligence.</p>
+                    <div class="btn-group">
+                        <a href="#why-africa" class="btn" style="background: #4a7ab5; color: #fff;">Our Advantage</a>
+                        <a href="#partnership" class="btn"
+                            style="background: transparent; border: 2px solid #fff;">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
         </div>
     </section>
 
-   <!-- ===== OUR VISION ===== -->
-<section>
-    <div class="container">
-        <h2 class="section-title">Our Vision</h2>
-        <p class="section-subtitle">A future where African research data powers global decision-making—verified, reliable, and accessible across all sectors.</p>
-
-        <div class="vision-grid">
-            <div class="vision-card">
-                <span class="icon">📊</span>
-                <h3>Verified Data Infrastructure</h3>
-                <p>Building Africa's most comprehensive, verified research datasets—spanning health, agriculture, economics, education, climate, and governance.</p>
-            </div>
-            <div class="vision-card">
-                <span class="icon">🤖</span>
-                <h3>AI-Powered Research Intelligence</h3>
-                <p>Developing AI tools for research validation, data analysis, and evidence-based decision intelligence—built on our verified datasets.</p>
-            </div>
-            <div class="vision-card">
-                <span class="icon">🌍</span>
-                <h3>Global Research Partnerships</h3>
-                <p>Collaborating with universities, research institutions, and tech companies worldwide to advance evidence-based decision-making.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-   <!-- ===== OUR MOONSHOT ===== -->
-<section class="section-alt">
-    <div class="container">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <span style="background: #1e3c72; color: #fff; padding: 4px 20px; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 16px;">Our Moonshot</span>
-            <h2 style="font-size: 2rem; color: #0b1e33; margin-bottom: 16px;">The African Research Intelligence Initiative</h2>
-            <p style="font-size: 1.1rem; color: #4a5b6e; max-width: 650px; margin: 0 auto 20px;">Building the first continent-wide, locally-validated research dataset ecosystem—spanning health, agriculture, economics, education, and beyond. Because the next generation of AI must be trained on the full diversity of human experience.</p>
-            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px;">
-                <span style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">📊 Health Research</span>
-                <span style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">🌾 Agriculture</span>
-                <span style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">💰 Economics</span>
-                <span style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">📚 Education</span>
-                <span style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">🏛️ Governance</span>
-                <span style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">🌍 Climate</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- ===== 50-YEAR ROADMAP ===== -->
-    <section>
+    <!-- ============================================================ -->
+    <!-- OUR VISION - THREE PILLARS                                   -->
+    <!-- ============================================================ -->
+    <section id="vision">
         <div class="container">
-            <h2 class="section-title">Our 50-Year Roadmap</h2>
-            <p class="section-subtitle">From research services to global innovation hub—building the future of research intelligence, one phase at a time.</p>
+            <h2 class="section-title">Our Vision</h2>
+            <p class="section-subtitle">A future where African research data powers global decision-making — verified,
+                reliable, and accessible across all sectors.</p>
+
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <h3>Verified Data Infrastructure</h3>
+                    <p>Building Africa's most comprehensive, verified research datasets — spanning health, agriculture,
+                        economics, education, climate, and governance.</p>
+                </div>
+                <div class="vision-card">
+                    <h3>AI-Powered Research Intelligence</h3>
+                    <p>Developing AI tools for research validation, data analysis, and evidence-based decision
+                        intelligence — built on our verified datasets.</p>
+                </div>
+                <div class="vision-card">
+                    <h3>Global Research Partnerships</h3>
+                    <p>Collaborating with universities, research institutions, and tech companies worldwide to advance
+                        evidence-based decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- OUR MOONSHOT                                                 -->
+    <!-- ============================================================ -->
+    <section id="moonshot" class="section-alt">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2rem; color: #0b1e33; margin-bottom: 16px;">The African Research Intelligence
+                    Initiative</h2>
+                <p style="font-size: 1.1rem; color: #4a5b6e; max-width: 650px; margin: 0 auto 20px;">Building the first
+                    continent-wide, locally-validated research dataset ecosystem — spanning health, agriculture,
+                    economics, education, and beyond. Because the next generation of AI must be trained on the full
+                    diversity of human experience.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px;">
+                    <span
+                        style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">📊
+                        Health Research</span>
+                    <span
+                        style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">🌾
+                        Agriculture</span>
+                    <span
+                        style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">💰
+                        Economics</span>
+                    <span
+                        style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">📚
+                        Education</span>
+                    <span
+                        style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">🏛️
+                        Governance</span>
+                    <span
+                        style="background: #eaeef3; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; color: #1e3c72;">🌍
+                        Climate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 50-YEAR ROADMAP                                              -->
+    <!-- ============================================================ -->
+    <section id="roadmap">
+        <div class="container">
+            <h2 class="section-title">Our Roadmap</h2>
+            <p class="section-subtitle">From research services to global innovation hub — building the future of
+                research intelligence, one phase at a time.</p>
 
             <div class="timeline">
-                <!-- Phase 1 -->
                 <div class="timeline-item">
                     <span class="phase">Phase 1</span>
-                    <h3>Foundation &amp; Revenue Engine</h3>
-                    <p>Building a sustainable, profitable research business—market research, data analysis, M&E, and medical research—to fund our long-term vision.</p>
-                    <span class="year">Years 1-3 (2026-2028)</span>
+                    <h3>Building Credibility, Generating Impact</h3>
+                    <p>Delivering world-class research services that solve real problems for our clients — while laying
+                        the reputational foundation for our innovation agenda.</p>
                 </div>
 
-                <!-- Phase 2 -->
                 <div class="timeline-item">
                     <span class="phase">Phase 2</span>
-                    <h3>Growth &amp; Specialization</h3>
-                    <p>Scaling our team and services, formalizing academic partnerships, and developing proprietary datasets and analytical tools.</p>
-                    <span class="year">Years 4-7 (2029-2032)</span>
+                    <h3>Building the Data Engine</h3>
+                    <p>Developing proprietary datasets and analytical tools that give Africa a competitive edge in
+                        global research — while growing a world-class team and forging academic partnerships that will
+                        define the next generation of African intelligence.</p>
                 </div>
 
-                <!-- Phase 3 -->
                 <div class="timeline-item">
                     <span class="phase">Phase 3</span>
-                    <h3>The Innovation Hub</h3>
-                    <p>Launching an R&amp;D lab, a fellowship program for African researchers, and the African Health Intelligence Project—our first major AI initiative.</p>
-                    <span class="year">Years 8-15 (2033-2040)</span>
+                    <h3>The Innovation Engine</h3>
+                    <p>Launching a fellowship program that turns Africa's brightest minds into the continent's next
+                        generation of AI leaders — while the African Research Intelligence Initiative builds the
+                        datasets and tools that will reshape global research.</p>
                 </div>
 
-                <!-- Phase 4 -->
                 <div class="timeline-item">
                     <span class="phase">Phase 4</span>
-                    <h3>Global Expansion</h3>
-                    <p>Opening international offices in other emerging markets, influencing global AI policy, and commercializing our research through spin-out ventures.</p>
-                    <span class="year">Years 16-25 (2041-2050)</span>
+                    <h3>Global Influence, Local Impact</h3>
+                    <p>Taking Scire Research's model of data intelligence to other emerging markets — influencing global
+                        AI policy, commercializing research through spin-out ventures, and positioning African research
+                        as a global standard.</p>
                 </div>
 
-                <!-- Phase 5 -->
                 <div class="timeline-item">
                     <span class="phase">Phase 5</span>
-                    <h3>Global Leadership</h3>
-                    <p>Scire Research as a multi-billion dollar global institution—defined by sustained innovation, world-class research, and enduring impact on how the world makes decisions.</p>
-                    <span class="year">Years 26-50+ (2051-2076+)</span>
+                    <h3>The Global Standard</h3>
+                    <p>Scire Research as a global institution — defined by sustained innovation,
+                        world-class research, and lasting impact on how the world makes decisions — from African
+                        intelligence, for the global good.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CREDIBILITY & TRACTION ===== -->
+    <!-- ============================================================ -->
+    <!-- CREDIBILITY & TRACTION                                       -->
+    <!-- ============================================================ -->
     <section class="section-alt">
         <div class="container">
             <h2 class="section-title">Why Trust Us to Build This?</h2>
-            <p class="section-subtitle">We're not starting from zero. We've already proven we can execute at the highest level.</p>
+            <p class="section-subtitle">We're not starting from zero. We've already proven we can execute at the highest
+                level.</p>
 
             <div class="credibility-grid">
                 <div class="credibility-item">
-                    <span class="icon">✅</span>
                     <h4>BeGreen (UNICEF)</h4>
                     <p>Selected among the top 1.6% of applicants to verify entrepreneur data for a global program.</p>
                 </div>
                 <div class="credibility-item">
-                    <span class="icon">🏛️</span>
                     <h4>NASCOP (Kenya MoH)</h4>
-                    <p>Validated health data for Kenya's Ministry of Health—ensuring accuracy at the national level.</p>
+                    <p>Validated health data for Kenya's Ministry of Health — ensuring accuracy at the national level.
+                    </p>
                 </div>
                 <div class="credibility-item">
-                    <span class="icon">📊</span>
                     <h4>200+ Client Accounts</h4>
                     <p>Analyzed and verified data for over 200 clients, achieving a 30%+ reduction in data errors.</p>
                 </div>
                 <div class="credibility-item">
-                    <span class="icon">🔬</span>
                     <h4>GCP Certified</h4>
-                    <p>Certified for ethical research and data protection—ensuring compliance and confidentiality.</p>
+                    <p>Certified for ethical research and data protection — ensuring compliance and confidentiality.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== WHY AFRICA ===== -->
-<section>
-    <div class="container">
-        <div style="max-width: 900px; margin: 0 auto; background: #fff; padding: 50px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #eaeef3;">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <span style="font-size: 2.5rem; display: block; margin-bottom: 12px;">🌍</span>
-                <h2 style="font-size: 1.8rem; color: #0b1e33; margin-bottom: 12px;">Why Africa?</h2>
-                <p style="font-size: 1.05rem; color: #4a5b6e; max-width: 700px; margin: 0 auto; line-height: 1.7;">
-                    Africa is not just our home—it's our strategic advantage in building the future of global research intelligence.
-                </p>
-            </div>
+    <!-- ============================================================ -->
+    <!-- WHY AFRICA - UPDATED CLOSING                                 -->
+    <!-- ============================================================ -->
+    <div class="why-africa-box">
+        <div class="header">
+            <h2>Why Africa?</h2>
+            <p>Africa is not just our home — it's our strategic advantage in building the future of global research
+                intelligence.</p>
+        </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 20px;">
-                <div style="text-align: center; padding: 20px;">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">📊</div>
-                    <h4 style="color: #1e3c72; font-size: 1rem; margin-bottom: 6px;">Data Diversity</h4>
-                    <p style="color: #4a5b6e; font-size: 0.9rem; line-height: 1.6;">54 countries, 2,000+ languages, and the world's youngest population—unparalleled diversity for research and AI training.</p>
-                </div>
-                <div style="text-align: center; padding: 20px;">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">🚀</div>
-                    <h4 style="color: #1e3c72; font-size: 1rem; margin-bottom: 6px;">Rapid Digital Adoption</h4>
-                    <p style="color: #4a5b6e; font-size: 0.9rem; line-height: 1.6;">Mobile money, fintech, and digital health are leapfrogging traditional infrastructure—creating unique research opportunities.</p>
-                </div>
-                <div style="text-align: center; padding: 20px;">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">🌱</div>
-                    <h4 style="color: #1e3c72; font-size: 1rem; margin-bottom: 6px;">Growing Innovation Ecosystem</h4>
-                    <p style="color: #4a5b6e; font-size: 0.9rem; line-height: 1.6;">From Nairobi's Silicon Savannah to Cape Town's tech hubs—Africa's research and innovation ecosystem is expanding rapidly.</p>
-                </div>
+        <div class="why-africa-grid">
+            <div class="item">
+                <h4>Data Diversity</h4>
+                <p>54 countries, 2,000+ languages, and the world's youngest population — unparalleled diversity for
+                    research and AI training.</p>
             </div>
+            <div class="item">
+                <h4>Rapid Digital Adoption</h4>
+                <p>Mobile money, fintech, and digital health are leapfrogging traditional infrastructure — creating
+                    unique research opportunities.</p>
+            </div>
+            <div class="item">
+                <h4>Growing Innovation Ecosystem</h4>
+                <p>From Nairobi's Silicon Savannah to Cape Town's tech hubs — Africa's research and innovation ecosystem
+                    is expanding rapidly.</p>
+            </div>
+        </div>
 
-            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eaeef3;">
-                <p style="color: #4a5b6e; font-size: 0.95rem; max-width: 650px; margin: 0 auto;">
-                    <strong style="color: #1e3c72;">Our belief:</strong> The next generation of global research will be built on data from Africa's unique and rapidly evolving context. 
-                    We're building the infrastructure to make that future a reality.
-                </p>
-            </div>
+        <div class="footer">
+            <p><strong>Our conviction is simple:</strong> the next generation of global research and AI will be built on
+                Africa's data. We're not waiting for that future — we're building it, right now, from Kenya.</p>
         </div>
     </div>
-</section>
 
-    <!-- ===== CTA SECTION ===== -->
-    <section class="cta-section">
+    <!-- ============================================================ -->
+    <!-- CTA SECTION                                                  -->
+    <!-- ============================================================ -->
+    <section id="partnership" class="cta-section">
         <div class="container">
             <h2>Join Us in Building the Future</h2>
-            <p>Whether you're a researcher, partner, funder, or innovator—let's build the future of research intelligence together.</p>
+            <p>Whether you're a researcher, partner, funder, or innovator — let's build the future of research
+                intelligence together.</p>
             <div class="btn-group">
                 <a href="index.html#contact" class="btn">Get in Touch</a>
-                <a href="index.html#services" class="btn btn-outline-cta">Explore Our Services</a>
+                <a href="services.html" class="btn btn-outline-cta">Explore Our Services</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ============================================================ -->
+    <!-- FOOTER                                                       -->
+    <!-- ============================================================ -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Scire Research. All rights reserved.</p>
 
-            <!-- Social Media Links -->
-            <div class="social-links" style="margin: 20px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                <a href="https://twitter.com/scire_research" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            <div class="social-links"
+                style="margin: 20px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://twitter.com/scire_research" target="_blank" rel="noopener noreferrer"
+                    aria-label="X (Twitter)">
+                    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                     </svg>
                 </a>
-                <a href="https://linkedin.com/company/scire-research" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                <a href="https://linkedin.com/company/scire-research" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                 </a>
-                <a href="https://facebook.com/scire_research" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <a href="https://facebook.com/scire_research" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                     </svg>
                 </a>
-                <a href="https://instagram.com/scire_research" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <a href="https://instagram.com/scire_research" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z" />
                     </svg>
                 </a>
                 <a href="https://wa.me/254704813110" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.057 0C5.495 0 .16 5.335.16 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.812 11.812 0 0012.057 0zm0 2.185c5.36 0 9.707 4.35 9.707 9.707 0 5.358-4.347 9.707-9.707 9.707-2.117 0-4.132-.685-5.792-1.946l-.344-.249-3.72.976.994-3.626-.232-.355a9.64 9.64 0 01-1.47-5.097c0-5.358 4.347-9.707 9.707-9.707z"/>
+                    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg>
                 </a>
             </div>
 
-            <!-- Footer Navigation Links -->
             <div class="footer-links">
-                <a href="index.html#services">Services</a>
-                <a href="index.html#team">Team</a>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="who-we-serve.html">Who We Serve</a>
                 <a href="blog.html">Insights</a>
                 <a href="vision.html">Vision</a>
-                <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </div>
 
-            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">Evidence for Better Decision-Making</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">The Foundation for Africa's Data-Driven Future
+            </p>
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ============================================================ -->
+    <!-- WHATSAPP BUTTON                                              -->
+    <!-- ============================================================ -->
+    <a href="https://wa.me/254704813110" target="_blank" rel="noopener noreferrer"
+        style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:1000; text-decoration:none; transition: all 0.3s;"
+        aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS                                                      -->
+    <!-- ============================================================ -->
     <script>
-        // ===== MOBILE MENU TOGGLE =====
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const closeMenu = document.getElementById('closeMenu');
-            const body = document.body;
-
-            function openMenu() {
-                hamburger.classList.add('active');
-                mobileMenu.classList.add('open');
-                body.style.overflow = 'hidden';
-            }
-
-            function closeMenuFunc() {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('open');
-                body.style.overflow = '';
-            }
-
-            hamburger.addEventListener('click', function() {
-                if (mobileMenu.classList.contains('open')) {
-                    closeMenuFunc();
-                } else {
-                    openMenu();
-                }
-            });
-
-            closeMenu.addEventListener('click', closeMenuFunc);
-
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', closeMenuFunc);
-            });
-
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-                    closeMenuFunc();
-                }
+        // ===== TRANSPARENT HEADER =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function () {
+                header.classList.toggle('scrolled', window.scrollY > 100);
             });
         });
-    </script>
 
+        // ===== HERO SLIDER WITH VIDEO SYNC =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.slider-dots .dot');
+            const video1 = document.getElementById('video1');
+            const video2 = document.getElementById('video2');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function switchVideo(videoNumber) {
+                if (videoNumber === 1) {
+                    video1.style.opacity = '1';
+                    video2.style.opacity = '0';
+                    video1.play().catch(function (e) { });
+                    video2.pause();
+                } else {
+                    video1.style.opacity = '0';
+                    video2.style.opacity = '1';
+                    video2.play().catch(function (e) { });
+                    video1.pause();
+                }
+            }
+
+            function showSlide(index) {
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                if (slides[index]) {
+                    slides[index].classList.add('active');
+                    const videoNum = slides[index].getAttribute('data-video');
+                    if (videoNum) {
+                        switchVideo(parseInt(videoNum));
+                    }
+                }
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                if (dots[index]) {
+                    dots[index].classList.add('active');
+                }
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function startAutoRotate() {
+                if (slideInterval) clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 6000);
+            }
+
+            function stopAutoRotate() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                    slideInterval = null;
+                }
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function () {
+                    stopAutoRotate();
+                    showSlide(index);
+                    startAutoRotate();
+                });
+            });
+
+            const sliderContainer = document.querySelector('.hero-slider');
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', stopAutoRotate);
+                sliderContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+
+            showSlide(0);
+            video1.play().catch(function (e) { });
+            video2.play().catch(function (e) { });
+            video2.pause();
+            startAutoRotate();
+        });
+
+        // ===== MOBILE MENU =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const h = document.getElementById('hamburger'),
+                m = document.getElementById('mobileMenu'),
+                c = document.getElementById('closeMenu');
+            const toggle = () => {
+                h.classList.toggle('active');
+                m.classList.toggle('open');
+                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+            };
+            h.addEventListener('click', toggle);
+            c.addEventListener('click', toggle);
+            m.querySelectorAll('a').forEach(l => l.addEventListener('click', toggle));
+            document.addEventListener('keydown', e => { if (e.key === 'Escape' && m.classList.contains('open')) toggle(); });
+        });
+    </script>
 </body>
 
 </html>
