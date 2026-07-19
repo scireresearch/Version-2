@@ -1381,8 +1381,8 @@
                     </p>
                     <div class="cta-row">
                         <a href="#diagnostic" class="btn">Run Compliance Diagnostic</a>
-                        <a href="#contact" class="btn">Request Architecture Briefing</a>
-
+                        <a href="mailto:info@scireresearch.com?subject=Sheria AI Enterprise Briefing"
+                            class="btn btn-outline-dark">Request Architecture Briefing</a>
                     </div>
                 </div>
 
@@ -1674,21 +1674,21 @@
                             <div class="result-section">
                                 <h4>🔍 Shadow AI Risk Assessment</h4>
                                 <ul id="shadowAiResults">
-                                    <li><span class="icon">⚠️</span> <span>Processing structural risk matrix details...</span></li>
+                                    <li><span>Processing structural risk matrix details...</span></li>
                                 </ul>
                             </div>
 
                             <div class="result-section">
                                 <h4>📋 Your Biggest Compliance Gaps</h4>
                                 <ul id="gapResults">
-                                    <li><span class="icon">❌</span> <span>Identifying friction vectors relative to Senate Bill 4 of 2026...</span></li>
+                                    <li><span>Identifying friction vectors relative to Senate Bill 4 of 2026...</span></li>
                                 </ul>
                             </div>
 
                             <div class="result-section">
                                 <h4>📌 Prioritized Action Plan</h4>
                                 <ul id="actionResults">
-                                    <li><span class="icon">📌</span> <span>Compiling architecture steps for local server onboarding...</span></li>
+                                    <li><span>Compiling architecture steps for local server onboarding...</span></li>
                                 </ul>
                             </div>
 
@@ -1710,8 +1710,9 @@
                             </div>
 
                             <div class="action-row">
-                                <a href="#contact" class="btn">Request Enterprise Briefing</a>
-                                <a href="#contact" class="btn">Email Our Team</a>
+                                <a href="#contact" class="btn">📞 Request Enterprise Briefing</a>
+                                <a href="mailto:info@scireresearch.com?subject=Sheria AI Report Follow-up"
+                                    class="btn btn-outline-dark">📧 Email Our Team</a>
                             </div>
 
                             <button onclick="resetScorecard()" class="btn btn-secondary"
@@ -1755,11 +1756,11 @@
                     <h3>Contact Details</h3>
                     <div class="detail">
 
-                        <div><strong>Titus Adik</strong><br /><a href="tel:+254704813110">+254 704 813110</a></div>
+                       <a href="tel:+254704813110">+254 704 813110</a></div>
                     </div>
                     <div class="detail">
 
-                        <div><strong>Opiyo Adik</strong><br /><a href="tel:+254704244657">+254 704 244657</a></div>
+                       <a href="tel:+254704244657">+254 704 244657</a></div>
                     </div>
                     <div class="detail">
 
@@ -1843,7 +1844,7 @@
                             d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                     </svg>
                 </a>
-                <a href="https://linkedin.com/in/titus-adik" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/company/133264080/admin/dashboard/" target="_blank" rel="noopener noreferrer"
                     aria-label="LinkedIn">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
                         <path
@@ -2191,22 +2192,25 @@
                 };
             }
 
-            // ===== SHOW RESULTS DASHBOARD =====
+            // ===== SHOW RESULTS DASHBOARD - NO DUPLICATE ICONS =====
             function showResultsDashboard(result) {
                 const badge = document.getElementById('resultBadge');
                 badge.className = 'result-badge ' + result.tier;
                 document.getElementById('resultScore').textContent = result.score + '%';
                 document.getElementById('resultLabel').textContent = result.label;
 
+                // Shadow AI - no extra icon, just the text
                 document.getElementById('shadowAiResults').innerHTML = 
-                    '<li><span class="icon">🔍</span> <span>' + result.shadowAiRisk + '</span></li>';
+                    '<li><span>' + result.shadowAiRisk + '</span></li>';
 
+                // Gaps - each item has its own icon (❌, ⚠️, ✅)
                 document.getElementById('gapResults').innerHTML = result.gaps.map(g =>
-                    '<li><span class="icon">📋</span> <span>' + g + '</span></li>'
+                    '<li><span>' + g + '</span></li>'
                 ).join('');
 
+                // Actions - each item has its own icon (📌)
                 document.getElementById('actionResults').innerHTML = result.actions.map(a =>
-                    '<li><span class="icon">📌</span> <span>' + a + '</span></li>'
+                    '<li><span>' + a + '</span></li>'
                 ).join('');
             }
 
@@ -2275,9 +2279,9 @@
                         form_origin: "Sheria AI Scorecard Module",
                         timestamp: new Date().toLocaleString('en-KE', { timeZone: 'Africa/Nairobi' }),
                         calculated_findings: {
-                            shadow_ai_summary: document.querySelector('#shadowAiResults li span:last-child')?.innerText || "No data",
-                            gaps_summary: document.querySelector('#gapResults li span:last-child')?.innerText || "No data",
-                            action_summary: document.querySelector('#actionResults li span:last-child')?.innerText || "No data"
+                            shadow_ai_summary: document.querySelector('#shadowAiResults li span')?.innerText || "No data",
+                            gaps_summary: Array.from(document.querySelectorAll('#gapResults li span')).map(el => el.innerText).join('; ') || "No data",
+                            action_summary: Array.from(document.querySelectorAll('#actionResults li span')).map(el => el.innerText).join('; ') || "No data"
                         },
                         score: document.getElementById('resultScore').textContent,
                         tier: document.getElementById('resultLabel').textContent,
