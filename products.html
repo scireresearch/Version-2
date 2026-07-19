@@ -2272,15 +2272,13 @@
                 };
             }
 
-            // ===== SUBMIT DIAGNOSTIC (FIXED) =====
+            // ===== SUBMIT DIAGNOSTIC =====
             function submitDiagnostic() {
-                // Get user details
                 const name = document.getElementById('leadName').value.trim();
                 const email = document.getElementById('leadEmail').value.trim();
                 const phone = document.getElementById('leadPhone').value.trim();
                 const company = document.getElementById('leadCompany').value.trim();
 
-                // Validate
                 if (!name || !email || !company) {
                     statusDiv.className = 'submission-status error';
                     statusDiv.textContent = '⚠️ Please fill in all required fields (Name, Email, Organization).';
@@ -2295,27 +2293,16 @@
                     return;
                 }
 
-                // Get answers and calculate results
                 const answers = getUserAnswers();
                 const result = calculateResults(answers);
 
-                // Show loading state
                 statusDiv.className = 'submission-status loading';
-                statusDiv.innerHTML = '<span class="spinner"></span> Generating your report...';
+                statusDiv.innerHTML = '<span class="spinner"></span> Submitting your results...';
                 statusDiv.style.display = 'block';
                 submitBtn.disabled = true;
 
-                // --- Build the email content ---
-                const timestamp = new Date().toLocaleString('en-KE', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                });
-
+                // Build the email body as plain text
                 const emailSubject = 'Sheria AI Diagnostic Results - ' + company;
-
                 const emailBody =
                     'New Sheria AI Diagnostic Submission\n' +
                     '====================================\n\n' +
@@ -2336,84 +2323,54 @@
                     result.gaps.join('\n') + '\n\n' +
                     'Action Plan:\n' +
                     result.actions.join('\n') + '\n\n' +
-                    'Full Answers (Q1-Q15):\n' +
+                    'Full Answers:\n' +
                     JSON.stringify(answers, null, 2) + '\n\n' +
-                    'Timestamp: ' + timestamp;
+                    'Timestamp: ' + new Date().toLocaleString('en-KE', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
 
-                // --- Open email to YOU (admin) ---
-                const adminMailto = 'mailto:infoscireresearch@gmail.com?subject=' +
+                // Send email using mailto: (opens default email client)
+                const mailtoLink = 'mailto:infoscireresearch@gmail.com?subject=' +
                     encodeURIComponent(emailSubject) +
                     '&body=' +
                     encodeURIComponent(emailBody);
 
-                // --- Open email to THE USER (their report) ---
-                const userSubject = 'Your AI Bill Compliance Readiness Report';
-                const userBody =
-                    'Dear ' + name + ',\n\n' +
-                    'Thank you for completing the Scire Research AI Bill Compliance Readiness Scorecard.\n\n' +
-                    'Your Results:\n' +
-                    '-------------\n' +
-                    'Compliance Score: ' + result.score + '%\n' +
-                    'Risk Tier: ' + result.tier + '\n' +
-                    'Status: ' + result.label + '\n\n' +
-                    'Shadow AI Risk Assessment:\n' +
-                    result.shadowAiInsights.join('\n') + '\n\n' +
-                    'Your Biggest Compliance Gaps:\n' +
-                    result.gaps.join('\n') + '\n\n' +
-                    'Prioritized Action Plan:\n' +
-                    result.actions.join('\n') + '\n\n' +
-                    '---\n' +
-                    'Need help preparing for Kenya\'s AI Bill, 2026?\n' +
-                    'Contact us at infoscireresearch@gmail.com\n\n' +
-                    'Scire Research\n' +
-                    'The Foundation for Africa\'s Data-Driven Future\n' +
-                    'Nairobi, Kenya';
+                // Open mail client
+                const win = window.open(mailtoLink, '_blank');
 
-                const userMailto = 'mailto:' + email + '?subject=' +
-                    encodeURIComponent(userSubject) +
-                    '&body=' +
-                    encodeURIComponent(userBody);
-
-                // --- Open both emails ---
-                // First open admin email (to you)
-                const adminWin = window.open(adminMailto, '_blank');
-
-                // Then open user email (to the respondent)
-                setTimeout(function() {
-                    const userWin = window.open(userMailto, '_blank');
-
-                    // Update status
-                    if (adminWin || userWin) {
-                        statusDiv.className = 'submission-status success';
-                        statusDiv.textContent = '✅ Reports ready! Please send both emails that just opened.';
-                        setTimeout(function() {
-                            statusDiv.style.display = 'none';
-                            showResultsDashboard(result);
-                            submitBtn.disabled = false;
-                        }, 1500);
-                    } else {
-                        // If popups are blocked, show the email content
-                        statusDiv.className = 'submission-status error';
-                        statusDiv.innerHTML =
-                            '⚠️ Please allow popups or copy the email below and send to <strong>infoscireresearch@gmail.com</strong>:' +
-                            '<br><br>' +
-                            '<div style="background:#f8fafc; padding:12px; border-radius:8px; text-align:left; font-size:0.85rem; max-height:200px; overflow:auto; border:1px solid #e2e8f0; white-space:pre-wrap;">' +
-                            emailBody +
-                            '</div>' +
-                            '<br><button onclick="copyEmailToClipboard()" class="btn btn-small" style="background:#1e3c72; color:#fff;">Copy Email</button>';
-                        submitBtn.disabled = false;
-                    }
-                }, 500);
+                if (win) {
+                    statusDiv.className = 'submission-status success';
+                    statusDiv.textContent = '✅ Please send the email that just opened. We\'ll get back to you within 24 hours.';
+                    setTimeout(() => {
+                        statusDiv.style.display = 'none';
+                        showResultsDashboard(result);
+                    }, 1000);
+                } else {
+                    // If mailto fails, show the email content so they can copy it
+                    statusDiv.className = 'submission-status error';
+                    statusDiv.innerHTML =
+                        '⚠️ Please copy the email below and send it to <strong>infoscireresearch@gmail.com</strong>:<br><br>' +
+                        '<div style="background:#f8fafc; padding:12px; border-radius:8px; text-align:left; font-size:0.85rem; max-height:200px; overflow:auto; border:1px solid #e2e8f0;">' +
+                        emailBody.replace(/\n/g, '<br>') +
+                        '</div>' +
+                        '<br><button onclick="copyEmailToClipboard()" class="btn btn-small" style="background:#1e3c72; color:#fff;">Copy Email</button>';
+                    submitBtn.disabled = false;
+                }
             }
 
             // ===== COPY EMAIL TO CLIPBOARD =====
             window.copyEmailToClipboard = function() {
-                const emailText = document.querySelector('.submission-status div[style*="background:#f8fafc"]');
+                const emailText = document.querySelector('.submission-status .pre-wrap') ||
+                    document.querySelector('.submission-status div[style*="background:#f8fafc"]');
                 if (emailText) {
                     const text = emailText.textContent;
-                    navigator.clipboard.writeText(text).then(function() {
+                    navigator.clipboard.writeText(text).then(() => {
                         alert('Email copied to clipboard! Please paste it into your email client and send to infoscireresearch@gmail.com');
-                    }).catch(function() {
+                    }).catch(() => {
                         // Fallback
                         const range = document.createRange();
                         range.selectNode(emailText);
