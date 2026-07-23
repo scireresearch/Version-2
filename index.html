@@ -961,65 +961,7 @@
             }
         }
 
-        /* ===== FAQ - SHORTENED ===== */
-        .faq-grid {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: #fff;
-            padding: 14px 20px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #eaeef3;
-            cursor: pointer;
-            transition: border-color 0.2s;
-        }
-
-        .faq-item:hover {
-            border-color: #1e3c72;
-        }
-
-        .faq-item h4 {
-            font-size: 0.95rem;
-            margin-bottom: 2px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-item h4 .toggle {
-            font-size: 1.1rem;
-            color: #4a7ab5;
-        }
-
-        .faq-item p {
-            font-size: 0.85rem;
-            color: #3d4e62;
-            display: none;
-            margin-top: 6px;
-            line-height: 1.5;
-        }
-
-        .faq-item.active p {
-            display: block;
-        }
-
-        .faq-more {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .faq-more a {
-            color: #4a7ab5;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .faq-more a:hover {
-            color: #1e3c72;
-        }
+      
 
         /* ===== CONTACT ===== */
         .contact-grid {
@@ -1263,7 +1205,6 @@
                         <a href="products">Products</a>
                         <a href="insights">Insights</a>
                         <a href="products">Vision</a>
-                        <a href="faq">FAQ</a>
                         <a href="#contact" class="btn-small">Contact</a>
                     </nav>
                     <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu">
@@ -1285,7 +1226,6 @@
             <a href="products">Products</a>
             <a href="insights">Insights</a>
             <a href="products">Vision</a>
-            <a href="faq">FAQ</a>
             <a href="#contact" class="btn">Contact</a>
         </nav>
     </div>
@@ -1436,52 +1376,6 @@
     </section>
 
 
-    <!-- ============================================================ -->
-    <!-- FAQ - SHORTENED                                              -->
-    <!-- ============================================================ -->
-    <section id="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Quick answers to common questions about working with us.</p>
-
-            <div class="faq-grid">
-                <div class="faq-item active">
-                    <h4>What types of research do you handle? <span class="toggle">−</span></h4>
-                    <p>We handle market research, data analysis, M&E for NGOs, medical and pharmaceutical research, AI
-                        fact-checking, and professional training. Our team has deep expertise across healthcare,
-                        agriculture, finance, and international development.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Who do you work with? <span class="toggle">+</span></h4>
-                    <p>We work with NGOs, businesses, government agencies, academic institutions, and development
-                        partners across Kenya and internationally. Recent partners include UNICEF and Kenya's Ministry
-                        of Health.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>How long does a typical project take? <span class="toggle">+</span></h4>
-                    <p>Timelines vary depending on scope. A market research study might take 2–4 weeks, while a
-                        comprehensive M&E evaluation could take 3–6 months. We provide a clear timeline in our proposal
-                        before we start.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>How do you ensure data quality and confidentiality? <span class="toggle">+</span></h4>
-                    <p>We follow rigorous quality assurance protocols at every stage. Our team is GCP certified, and we
-                        have a proven track record of reducing data errors by over 30%. All client data is handled with
-                        the highest level of confidentiality.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>What does the process look like?<span class="toggle">+</span></h4>
-                    <p>We follow a transparent 5-step process: Consult Define (understand your needs),
-                        Proposal Plan (scope and timeline), Collect
-                        Verify (field research and data collection), Analyze Interpret
-                        (rigorous analysis), and Report Recommend (clear, actionable insights).</p>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </section>
 
     <!-- ============================================================ -->
     <!-- CONTACT                                                      -->
@@ -1646,7 +1540,6 @@
                 <a href="#products">Products</a>
                 <a href="#insights">Insights</a>
                 <a href="vision.html">Vision</a>
-                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
             <p style="margin-top: 8px; font-size: 0.7rem; opacity: 0.7;">The Foundation for Africa's Data-Driven Future
@@ -1737,22 +1630,6 @@
             document.addEventListener('keydown', e => { if (e.key === 'Escape' && m.classList.contains('open')) toggle(); });
         });
 
-        // ===== FAQ =====
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.addEventListener('click', function () {
-                    const isActive = this.classList.contains('active');
-                    document.querySelectorAll('.faq-item').forEach(i => {
-                        i.classList.remove('active');
-                        i.querySelector('.toggle').textContent = '+';
-                    });
-                    if (!isActive) {
-                        this.classList.add('active');
-                        this.querySelector('.toggle').textContent = '−';
-                    }
-                });
-            });
-        });
 
         // ===== FORM =====
         document.addEventListener('DOMContentLoaded', function () {
